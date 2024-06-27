@@ -54,9 +54,9 @@ class _Phase1State extends State<Phase1> {
                       // ${pRt}   ${MediaQuery.of(context).size.width }
                       child: Text(
                         'Create better prototypes, faster.  ',
-                        style: GoogleFonts.archivoBlack(
-                          textStyle: TextStyle(
+                        style: TextStyle(
                             fontSize: 60,
+                            fontFamily: 'ArchivoBlack-Regular',
                             letterSpacing: 0,
                             fontWeight: FontWeight.w100,
                             decoration: TextDecoration.none,
@@ -69,7 +69,7 @@ class _Phase1State extends State<Phase1> {
                           .slideX(begin: -5, end: 0)
                           .shake(),
                     ),
-                  ),
+                
 
                   Container(
                     // width: 450,
@@ -77,15 +77,15 @@ class _Phase1State extends State<Phase1> {
                     width: MediaQuery.of(context).size.width * 0.3,
                     child: Text(
                         'Framer is the best prototyping tool for teams. Quickly create realistic interactive designs, share with just a link, and handoff cleanly.',
-                        style : GoogleFonts.inter(
-                        textStyle: TextStyle(
+                        style : TextStyle(
                           fontSize: 20,
                           letterSpacing: 0,
+                          fontFamily: ' Inter',
                           fontWeight: FontWeight.w500,
                           decoration: TextDecoration.none,
                           color: const Color.fromARGB(255, 0, 0, 0),
                         ))).animate().fade(delay: 100.ms).slideX(begin: -5, end: 0),
-                  ),
+                  
 
                   Padding(
                     padding: EdgeInsets.only(top: 50),

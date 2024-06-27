@@ -95,6 +95,7 @@ class Mphase5 extends StatelessWidget {
                                       // decoration: TextDecoration.lineThrough,
                                       decoration: TextDecoration.none,
                                       color: Colors.black,
+                                      fontFamily: 'Inter',
                                       fontWeight: FontWeight.normal,
                                       // decoration: TextDecoration.none,/
                                       fontSize: 20,

@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:framer/phases/anime2.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class phase2 extends StatelessWidget {
   get context => null;
@@ -42,20 +41,7 @@ class phase2 extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            // Container(
-            // color: Colors.black26,
-            // width: 450,
-            // height: 150,
-            // child : Text('The Insert Menu is your toolbox.',
-
-            // style: TextStyle(
-            // fontSize: 50,
-            // letterSpacing: 0,
-            // fontWeight: FontWeight.w900,
-            // decoration: TextDecoration.none,))
-            // )
-
-            SizedBox(height: 90,),
+           SizedBox(height: 90,),
 
             Container(
                 // width: 450,
@@ -121,16 +107,15 @@ class phase2 extends StatelessWidget {
                               height: MediaQuery.of(context).size.height * 0.3,
                                 child: Text(
                                   'We begin by meeting clients to understand their needs and project goals. They conduct feasibility studies to assess viability, define project scope, and create detailed requirement specifications for clarity and alignment.',
-                                    style : GoogleFonts.inter(
-                        textStyle: TextStyle(
+                                    style : TextStyle(
                           fontSize: 20,
+                          fontFamily: 'Inter',
                           letterSpacing: 0,
                           fontWeight: FontWeight.w500,
                           decoration: TextDecoration.none,
                           color: Color.fromARGB(255, 0, 0, 0),
                         ))
-                                ),
-                              ),
+                              )
                             ]),
                       
                         

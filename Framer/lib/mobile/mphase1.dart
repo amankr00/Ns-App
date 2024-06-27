@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:framer/mobile/appAnime.dart';
 import 'package:framer/mobile/mgetMeApp.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:framer/phases/anime4.dart';
 
@@ -49,26 +48,24 @@ class _Mphase1State extends State<Mphase1> {
                             TextSpan(children: [
                               TextSpan(
                                 text: 'Transforming Your Ideas into ',
-                                style: GoogleFonts.bebasNeue(
-                                  textStyle: TextStyle(
+                                style: TextStyle(
                                     fontSize: 60,
+                                    fontFamily: 'bebas-neue',
                                     letterSpacing: 0,
-                                    fontWeight: FontWeight.w500,
+                                    fontWeight: FontWeight.bold,
                                     decoration: TextDecoration.none,
                                     color: Color.fromARGB(255, 0, 0, 0),
                                   ),
                                 ),
-                              ),
                               TextSpan(
                                 text: 'Innovative Apps ',
-                                style: GoogleFonts.bebasNeue(
-                                  textStyle: TextStyle(
+                                style: TextStyle(
                                     fontSize: 60,
+                                    fontFamily: 'bebas-neue',
                                     letterSpacing: 0,
-                                    fontWeight: FontWeight.w500,
+                                    fontWeight: FontWeight.bold,
                                     decoration: TextDecoration.none,
                                     color: Color(0xff2196F3),
-                                  ),
                                 ),
                               )
                             ]),
@@ -84,16 +81,16 @@ class _Mphase1State extends State<Mphase1> {
                             TextSpan(children: [
                               TextSpan(
                               text : "Turning your vision into innovative apps, we create custom solutions that drive success and foster growth in the digital realm.",
-                              style: GoogleFonts.bebasNeue(
-                                  textStyle: TextStyle(
+                              style: TextStyle(
                                     fontSize: 20,
+                                    fontFamily: 'bebas-neue',
                                     letterSpacing: 0,
                                     fontWeight: FontWeight.w500,
                                     decoration: TextDecoration.none,
                                     color: Color.fromARGB(255, 0, 0, 0),
                                   ),
                                 ),
-                              )])])
+                              ])])
               )
 
               ),
@@ -120,30 +117,8 @@ class _Mphase1State extends State<Mphase1> {
               // color: Colors.purple,
               alignment: Alignment.center,
               child : MAnime1(),
-              
-              // color: Colors.green,
-              // child: ClipRRect(
-              //   child: Image.asset(
-              //     'assets/images/copy.png',
-              //     fit: BoxFit.contain,
-              //   ),
-              // ))
-              // ).animate().fade(duration: 500.ms).slideX(begin: 1, end: 0),
         )
         ),
-//         Container(
-//   // width: 200,
-//   height: 3,
-//   decoration: BoxDecoration(
-//     border: Border.all(
-//       color: const Color.fromARGB(255, 104, 105, 106), // Border color
-//       width: 2.0, // Border width
-//     ),
-//     borderRadius: BorderRadius.circular(10), // Rounded corners
-//   ),
-  
-// )
-
       ],
     );
   }

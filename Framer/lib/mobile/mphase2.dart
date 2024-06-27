@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:framer/phases/anime2.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class Mphase2 extends StatelessWidget {
   get context => null;
@@ -124,15 +123,14 @@ class Mphase2 extends StatelessWidget {
                                   // height: MediaQuery.of(context).size.height * 0.3,
                                   child: Text(
                                       "Conduct stakeholder interviews and surveys to identify client goals, pain points, and requirements for a clear project scope statement.",
-                                      style: GoogleFonts.inter(
-                                          textStyle: TextStyle(
+                                      style:TextStyle(
                                         fontSize: 20,
+                                        fontFamily: 'Inter',
                                         letterSpacing: 0,
                                         fontWeight: FontWeight.w500,
                                         decoration: TextDecoration.none,
                                         color: Color.fromARGB(255, 0, 0, 0),
-                                      ))),
-                                ),
+                                      )))
                               ]),
                         ]),
                   ))

@@ -25,8 +25,9 @@ class navbar extends StatelessWidget {
             width: MediaQuery.of(context).size.width * 0.3,
               child: Text(
                 'NS APPS INNOVATIONS',
-                style: GoogleFonts.rubik(
+                style: TextStyle(
                     fontSize: 20,
+                    fontFamily: 'Rubik',
                     letterSpacing: 0,
                     fontWeight: FontWeight.w400,
                     decoration: TextDecoration.none,
@@ -59,15 +60,14 @@ class navbar extends StatelessWidget {
                       Container(
                       // width: MediaQuery.of(context).size.width * 0.2,
                         child: Text('Open Play Store',
-                            style: GoogleFonts.raleway(
-                                textStyle: TextStyle(
+                            style: TextStyle(
                               fontSize: 16,
+                              fontFamily: 'Raleway',
                               letterSpacing: 0,
                               fontWeight: FontWeight.w500,
                               decoration: TextDecoration.none,
                               color: Color.fromARGB(255, 255, 255, 255),
                             ))),
-                      )
                     ],
                   ),
                   )

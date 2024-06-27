@@ -67,11 +67,9 @@ class Mphase6 extends StatelessWidget {
                                     child: Text(
                                       "Stay at the forefront through innovative technology exploration, researching trends, adopting new tools, and enhancing existing systems continually.",
                                       style: TextStyle(
-                                        // decoration: TextDecoration.lineThrough,
                                         decoration: TextDecoration.none,
-                                        color: Colors.black,
-                                        fontWeight: FontWeight.normal,
-                                        // decoration: TextDecoration.none,/
+                                        color: Colors.black , 
+                                        fontFamily: 'Inter',
                                         fontSize: 20,
                                       ),
                                     ),

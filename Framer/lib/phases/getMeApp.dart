@@ -237,30 +237,29 @@ class _HoverEffectExampleState extends State<HoverEffectExample> {
                     ),
                     Text(
                       'GET YOUR OWN APP TODAY',
-                      style: GoogleFonts.archivoBlack(
-                        textStyle: TextStyle(
+                      style:TextStyle(
                           fontSize: 50,
+                          fontFamily: 'ArchivoBlack-Regular',
                           letterSpacing: 0,
                           fontWeight: FontWeight.w100,
                           decoration: TextDecoration.none,
                           color: Color(0xff5C6B8B),
                         ),
-                      ),
                     ),
                     Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 30),
                         child: Text(
                           'Your Vision , Our Code',
-                          style: GoogleFonts.arimo(
-                            textStyle: TextStyle(
+                          style: TextStyle(
                               fontSize: 22,
+                              fontFamily : 'arimo',
                               letterSpacing: 0,
                               fontWeight: FontWeight.w600,
                               decoration: TextDecoration.none,
                               color: Color(0xff5C6B8B),
                             ),
                           ),
-                        )),
+                        ),
                     Container(
                       height: MediaQuery.of(context).size.height * 0.20,
                       child: ClipRect(
@@ -283,9 +282,10 @@ class _HoverEffectExampleState extends State<HoverEffectExample> {
                             textAlign: TextAlign.center,
                             decoration: InputDecoration(
                               hintText: 'Enter your name',
-                              hintStyle: GoogleFonts.play(
+                              hintStyle: TextStyle(
                                 color: Color.fromARGB(255, 163, 162, 162),
                                 fontSize: 18,
+                                fontFamily: 'play',
                                 fontWeight: FontWeight.w500,
                                 letterSpacing: 0,
                               ),
@@ -311,9 +311,10 @@ class _HoverEffectExampleState extends State<HoverEffectExample> {
                             textAlign: TextAlign.center,
                             decoration: InputDecoration(
                               hintText: 'Enter your contact number',
-                              hintStyle: GoogleFonts.roboto(
+                              hintStyle: TextStyle(
                                 color: Color.fromARGB(255, 163, 162, 162),
                                 fontSize: 18,
+                                fontFamily: 'play',
                                 fontWeight: FontWeight.w400,
                                 letterSpacing: 0,
                               ),

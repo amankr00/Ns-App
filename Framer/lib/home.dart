@@ -148,14 +148,14 @@ class _HomeMainState extends State<HomeMain> {
               Container(
                       child: Text(
                           'Trusted by some of the best in the business', //$pRt'
-                          style: GoogleFonts.workSans(
-                              textStyle: TextStyle(
+                          style: TextStyle(
                             fontSize: 20,
+                            fontFamily: 'work-sans',
                             letterSpacing: 0,
                             fontWeight: FontWeight.w500,
                             decoration: TextDecoration.none,
                             color: Color.fromARGB(255, 148, 146, 146),
-                          ))))
+                          )))
                   .animate()
                   .fade(delay: 100.ms)
                   .slideY(begin: -100, end: 0),
@@ -296,49 +296,71 @@ class _MobileLyState extends State<MobileLy> {
       }
     }
     return Scaffold(
-    backgroundColor: Color.fromARGB(255, 255, 255, 255),
-    body : SingleChildScrollView(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Navbar(),
-          Mphase1(pRt, pLt),
-          SizedBox(height: 30,),
-          MAnime2(),
-          SizedBox(height: 30,),
-          Mphase2(),
-          SizedBox(height: 30,),
-          MAnime2(),
-          SizedBox(height: 30,),
-          Mphase3(),
-          SizedBox(height: 30,),
-          MAnime2(),
-          SizedBox(height: 30,),
-          // MPhase4Viewer(),
-           Padding(
-                  padding: EdgeInsets.only(top: 30 , bottom: 30),
+        backgroundColor: Color.fromARGB(255, 255, 255, 255),
+        body: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Navbar(),
+              Mphase1(pRt, pLt),
+              SizedBox(
+                height: 30,
+              ),
+              MAnime2(),
+              SizedBox(
+                height: 30,
+              ),
+              Mphase2(),
+              SizedBox(
+                height: 30,
+              ),
+              MAnime2(),
+              SizedBox(
+                height: 30,
+              ),
+              Mphase3(),
+              SizedBox(
+                height: 30,
+              ),
+              MAnime2(),
+              SizedBox(
+                height: 30,
+              ),
+              // MPhase4Viewer(),
+              Padding(
+                  padding: EdgeInsets.only(top: 30, bottom: 30),
                   child: Container(
-                      height: MediaQuery.of(context).size.width * 0.8,
-                      color: Color.fromRGBO(243, 239, 239, 0.561),
-                      child: MPhase4Viewer()
-                      )),
-          SizedBox(height: 30,),
-          MAnime2(),
-          SizedBox(height: 30,),
-          Mphase5(),
-          SizedBox(height: 30,),
-          MAnime2(),
-          SizedBox(height: 30,),
-          Mphase6(), 
-          SizedBox(height: 30,),
-          MAnime2(),
-          SizedBox(height: 30,),
-          Mphase7(),           
-
-        ],
-      ),
-    )
-    );
+                    height: MediaQuery.of(context).size.width * 0.8,
+                    color: Color.fromRGBO(243, 239, 239, 0.561),
+                    // child: MPhase4Viewer()
+                  )),
+              SizedBox(
+                height: 30,
+              ),
+              MAnime2(),
+              SizedBox(
+                height: 30,
+              ),
+              Mphase5(),
+              SizedBox(
+                height: 30,
+              ),
+              MAnime2(),
+              SizedBox(
+                height: 30,
+              ),
+              Mphase6(),
+              SizedBox(
+                height: 30,
+              ),
+              MAnime2(),
+              SizedBox(
+                height: 30,
+              ),
+              Mphase7(),
+            ],
+          ),
+        ));
   }
 }
