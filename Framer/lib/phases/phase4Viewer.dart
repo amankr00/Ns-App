@@ -68,7 +68,14 @@ class _MyAppState extends State<Phase4Viewer> {
           child: SmoothPageIndicator(
             controller: controller,
             count: 4,
-            effect: WormEffect(),
+            effect: ScrollingDotsEffect(
+            dotWidth: 12.0,
+            dotHeight: 12.0,
+            strokeWidth: 1,
+            fixedCenter: true,
+            paintStyle:  PaintingStyle.stroke,
+            dotColor: Colors.orange,
+            ),
           ),
         ),
       ],

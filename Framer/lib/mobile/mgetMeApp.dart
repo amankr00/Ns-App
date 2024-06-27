@@ -1,22 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_animate/flutter_animate.dart';
-import 'package:framer/phases/snakbar.dart';
-import 'package:framer/phases/tt.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 
-class HoverEffectExample extends StatefulWidget {
+class HoverEffectExample1 extends StatefulWidget {
   @override
-  _HoverEffectExampleState createState() => _HoverEffectExampleState();
+  _HoverEffectExample1State createState() => _HoverEffectExample1State();
 }
 
 bool h = false;
 
-class _HoverEffectExampleState extends State<HoverEffectExample> {
+class _HoverEffectExample1State extends State<HoverEffectExample1> {
   bool _isHovering = false;
   final TextEditingController _nameController = TextEditingController();
   final TextEditingController _numberController = TextEditingController();
   final TextEditingController _emailController = TextEditingController();
-  bool  isDownloadHovered = false;
+  bool isDownloadHovered = false;
   void cc() {
     print('hello');
   }
@@ -24,44 +22,7 @@ class _HoverEffectExampleState extends State<HoverEffectExample> {
   @override
   Widget build(BuildContext context) {
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-      MouseRegion(
-          onEnter: (event) => _updateHover(true),
-          onExit: (event) => _updateHover(false),
-          child: GestureDetector(
-            onTap: () {
-              if (h == true) {
-                // stark();
-                cc();
-              }
-              // showDialog(
-              //   context: context,
-              //   useRootNavigator: false,
-              //   // Navigator.pop(context, true),
-              //   builder: (BuildContext context) {
-              //     return Container(
-              //         child: subscriptionForm(
-              //             context, _nameController, _numberController));
-              //   },
-              // );
-            },
-
-            //           void _showSnackbar() {
-            //   ScaffoldMessenger.of(context).showSnackBar(
-            //     SnackBar(
-            //       content: Text('Container tapped!'),
-            //       duration: Duration(seconds: 2),
-            //     ),
-            //   );
-            // }
-
-            // @override
-            // Widget build(BuildContext context) {
-            //   return GestureDetector(
-            //     onTap: () {
-            //       _showSnackbar();
-            //     },
-
-            child : Padding(
+     Padding(
                   padding: EdgeInsetsDirectional.only(top: 30),
                   child: MouseRegion(
                     onEnter: (_) {
@@ -89,7 +50,7 @@ class _HoverEffectExampleState extends State<HoverEffectExample> {
               );
                       },
                       child: Container(
-                        width: 220,
+                        width: 230,
                         decoration: BoxDecoration(
                           color: isDownloadHovered
                               ? Color.fromARGB(255, 252, 110, 39)
@@ -114,7 +75,7 @@ class _HoverEffectExampleState extends State<HoverEffectExample> {
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     10, 15, 5, 15),
                                 child: Text(
-                                  'Download app',
+                                  'Get me an app',
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
                                     color: Color(0xFFFFFFFF),
@@ -141,46 +102,6 @@ class _HoverEffectExampleState extends State<HoverEffectExample> {
                     ),
                   ),
                 ),
-
-
-
-            // child: AnimatedContainer(
-            //   duration: Duration(milliseconds: 200),
-            //   width: _isHovering ? 180 * 1.05 : 180,
-            //   height: _isHovering ? 50 * 1.05 : 50,
-            //   decoration: BoxDecoration(
-            //     color: _isHovering
-            //         ? Color.fromARGB(255, 0, 140, 255)
-            //         : const Color.fromARGB(255, 33, 150, 243),
-            //     borderRadius: BorderRadius.circular(20),
-            //   ),
-            //   child: Row(
-            //     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            //     children: [
-            //       Text('Get me an app',
-            //           style: GoogleFonts.raleway(
-            //               textStyle: TextStyle(
-            //             fontSize: 16,
-            //             letterSpacing: 0,
-            //             fontWeight: FontWeight.w500,
-            //             decoration: TextDecoration.none,
-            //             color: Color.fromARGB(255, 255, 255, 255),
-            //           ))),
-            //       Container(
-            //         width: 20,
-            //         height: 30,
-            //         child: ClipRRect(
-            //           child: Image.asset(
-            //             'assets/images/rarrow.png',
-            //             width: 20,
-            //             height: 30,
-            //           ),
-            //         ),
-            //       ),
-            //     ],
-            //   ),
-            // ),
-          )),
     ]);
   }
 

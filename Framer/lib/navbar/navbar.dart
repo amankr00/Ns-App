@@ -21,51 +21,57 @@ class navbar extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           // crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              'NS APPS INNOVATIONS',
-              style: GoogleFonts.rubik(
-                  fontSize: 20,
-                  letterSpacing: 0,
-                  fontWeight: FontWeight.w400,
-                  decoration: TextDecoration.none,
-                  color: const Color.fromARGB(255, 0, 0, 0)),
+            Container(
+            width: MediaQuery.of(context).size.width * 0.3,
+              child: Text(
+                'NS APPS INNOVATIONS',
+                style: GoogleFonts.rubik(
+                    fontSize: 20,
+                    letterSpacing: 0,
+                    fontWeight: FontWeight.w400,
+                    decoration: TextDecoration.none,
+                    color: const Color.fromARGB(255, 0, 0, 0)),
+              ),
             ),
             Container(
                 // Navbar Open Framer
-                width: MediaQuery.of(context).size.width * 0.11,
-                height: MediaQuery.of(context).size.height * 0.06,
+                // width: MediaQuery.of(context).size.width * 0.11,
+                width: 200,
+                // height: MediaQuery.of(context).size.height * 0.06,
                 decoration: BoxDecoration(
-                  color: Colors.blue,
+                  color: Color(0xFFff5700),
                   borderRadius: BorderRadius.circular(20),
                 ),
-                child: Padding(
-                  padding: EdgeInsets.all(
-                      12.0), // Add 16 pixels of padding on all sides
-
+               child : Padding(padding: EdgeInsets.all(16),
                   child: Row(
                     // Image and text
 
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
 
                     children: [
+
                       ClipRRect(
                           child: Image.asset(
                         'assets/images/play.png',
                         width: 40,
                         height: 40,
                       )),
-                      Text('Open Play Store',
-                          style: GoogleFonts.raleway(
-                              textStyle: TextStyle(
-                            fontSize: 16,
-                            letterSpacing: 0,
-                            fontWeight: FontWeight.w500,
-                            decoration: TextDecoration.none,
-                            color: Color.fromARGB(255, 255, 255, 255),
-                          )))
+                      Container(
+                      // width: MediaQuery.of(context).size.width * 0.2,
+                        child: Text('Open Play Store',
+                            style: GoogleFonts.raleway(
+                                textStyle: TextStyle(
+                              fontSize: 16,
+                              letterSpacing: 0,
+                              fontWeight: FontWeight.w500,
+                              decoration: TextDecoration.none,
+                              color: Color.fromARGB(255, 255, 255, 255),
+                            ))),
+                      )
                     ],
                   ),
-                ))
+                  )
+                )
           ],
         ));
   }

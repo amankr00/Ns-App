@@ -1,8 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:framer/navbar/navbar.dart';
 import 'package:framer/phases/anime4.dart';
+import 'package:framer/navbar/navbar.dart';
+import 'package:framer/phases/anime5.dart';
 import 'package:framer/phases/getMeApp.dart';
 import 'package:framer/phases/subs.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -33,7 +34,7 @@ class _Phase1State extends State<Phase1> {
       children: [
         // left body
         Flexible(
-          flex: 2,
+          flex: 3,
           child: Padding(
             padding: EdgeInsetsDirectional.fromSTEB(pRt, 0, 0, 0),
             child: Column(
@@ -99,18 +100,26 @@ class _Phase1State extends State<Phase1> {
 
         // Right Body
         Flexible(
-          flex: 1,
+          flex: 2,
           child: Padding(
             padding: EdgeInsetsDirectional.fromSTEB(0, 30, pLt, 0),
             child: Container(
+            // color : Colors.purple,
                 width: MediaQuery.of(context).size.width * 0.5,
                 height: MediaQuery.of(context).size.height * 0.7,
-                child: ClipRRect(
-                  child: Image.asset(
-                    'assets/images/copy.png',
-                    fit: BoxFit.contain,
-                  ),
-                )).animate().fade(duration: 500.ms).slideX(begin: 1, end: 0),
+                child : Anime5(),
+                
+
+                // child: ClipRRect(
+                //   child: Image.asset(
+                //     'assets/images/copy.png',
+                //     fit: BoxFit.contain,
+                //   ),
+                // )
+                )
+                // .animate()
+                // .fade(duration: 500.ms)
+                // .slideX(begin: 1, end: 0),
           ),
         )
       ],

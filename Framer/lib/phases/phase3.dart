@@ -60,9 +60,9 @@ class phase3 extends StatelessWidget {
                                     // decoration: TextDecoration.lineThrough,
                                     decoration: TextDecoration.none,
                                     color: Colors.black,
-                                    fontWeight: FontWeight.w500,
+                                    fontWeight: FontWeight.normal,
                                     // decoration: TextDecoration.none,/
-                                    fontSize: 25,
+                                    fontSize: 20,
                                   ),
                                 ),
                               ),

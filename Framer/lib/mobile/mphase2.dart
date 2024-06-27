@@ -4,39 +4,38 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'package:framer/phases/anime2.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class phase2 extends StatelessWidget {
+class Mphase2 extends StatelessWidget {
   get context => null;
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return Column(
       // Purple image and Right - side text
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      // mainAxisAlignment: MainAxisAlignment.spaceAround,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         // Padding(
         //   padding: const EdgeInsetsDirectional.fromSTEB(18, 0, 150, 0),
         // child:
-        Padding(
-          padding: const EdgeInsets.only(right: 70),
+        
 
-          child : Container(
-              width: MediaQuery.of(context).size.width * 0.4,
-              height: MediaQuery.of(context).size.height * 0.65,
+           Container(
+              width: MediaQuery.of(context).size.width * 1,
+              // height: MediaQuery.of(context).size.height * 0.65,
               // color: Colors.black,
               alignment: Alignment.center,
               
               child: ClipRect(
                   child: Image.asset(
                 'assets/images/sideloook.png',
-                width: MediaQuery.of(context).size.width * 0.4,
-                height: MediaQuery.of(context).size.height * 0.9,
+                width: MediaQuery.of(context).size.width * 1,
+                // height: MediaQuery.of(context).size.height * 0.9,
                 // width: 800,
                 // height: 750,
-                fit: BoxFit.cover,
+                fit: BoxFit.fill,
               ))),
               
-        ),
+        
         // ),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -55,13 +54,13 @@ class phase2 extends StatelessWidget {
             // decoration: TextDecoration.none,))
             // )
 
-            SizedBox(height: 90,),
+            SizedBox(height: 10,),
 
             Container(
                 // width: 450,
-                width: MediaQuery.of(context).size.width * 0.35,
+                width: MediaQuery.of(context).size.width * 0.7,
                 // color: Colors.black12,
-
+              
                 child: Align(
                   alignment: AlignmentDirectional.center,
                   child: RichText(
@@ -106,7 +105,8 @@ class phase2 extends StatelessWidget {
                 padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
                 child: Container(
                   // width: 550,
-                  width: MediaQuery.of(context).size.width * 0.3,
+                   width: MediaQuery.of(context).size.width * 0.7,
+                  //  height: MediaQuery.of(context).size.height * 0.7,
                   // height: 300,
                   child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -117,7 +117,7 @@ class phase2 extends StatelessWidget {
                             children: [
                               // Anime2(),
                               Container(
-                              width: 450,
+                               width: MediaQuery.of(context).size.width * 0.7,
                               height: MediaQuery.of(context).size.height * 0.3,
                                 child: Text(
                                   'We begin by meeting clients to understand their needs and project goals. They conduct feasibility studies to assess viability, define project scope, and create detailed requirement specifications for clarity and alignment.',
@@ -142,6 +142,3 @@ class phase2 extends StatelessWidget {
     );
   }
 }
-
-
-

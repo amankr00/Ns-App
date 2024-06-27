@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
           fontFamily: GoogleFonts.archivoBlack().fontFamily),
       initialRoute: '/',
       routes: {
-        '/': (context) => HomeMain(),
+        '/': (context) => HomeMain(title : 'therer'),
       },
     );
   }

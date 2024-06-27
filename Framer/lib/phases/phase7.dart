@@ -1,13 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:framer/phases/anime.dart';
+import 'package:framer/phases/t.dart';
 
 class phase7 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
       // height: 830,
-      height: MediaQuery.of(context).size.height * 0.93,
+      // height: MediaQuery.of(context).size.height * 0.93,
       width: MediaQuery.of(context).size.width * 1.00,
       color: Colors.blue,
 
@@ -67,6 +68,7 @@ class phase7 extends StatelessWidget {
                 'assets/images/big.png',
                 fit: BoxFit.contain,
               ))),
+          // Cal(),
         ],
       ),
     );
