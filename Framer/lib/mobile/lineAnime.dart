@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:lottie/lottie.dart';
 
 class MAnime2 extends StatefulWidget {
@@ -8,20 +9,22 @@ class MAnime2 extends StatefulWidget {
   State<MAnime2> createState() => _MAnime2State();
 }
 
-class _MAnime2State extends State<MAnime2> {
-  // late final AnimationController _controller;
-  // @override
-  // void initState() {
-  //   super.initState();
-  //   _controller = AnimationController(
-  //       vsync: this, duration: Duration(seconds: 7)); // _controller.forward();
-  // }
+class _MAnime2State extends State<MAnime2>  with SingleTickerProviderStateMixin{
 
-  // @override
-  // void dispose() {
-  //   _controller.dispose();
-  //   super.dispose();
-  // }
+  late AnimationController _controller;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = AnimationController(vsync: this, duration: const Duration(milliseconds: 3000));
+    _controller.repeat();
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -30,16 +33,10 @@ class _MAnime2State extends State<MAnime2> {
 
   Widget _buildUI() {
     return Container(
-    // width: MediaQuery.of(context).size.width * 1,
-    // height: MediaQuery.of(context).size.height * 0.5,
-    // width: 500,
-    // height :100,
-        child: LottieBuilder.asset(
+      child: LottieBuilder.asset(
       'assets/animations/line2.json',
-      // controller: _controller,
-      // width: 20,
-      // height: 20,
-      repeat: true,
+      // repeat: true,
+      controller: _controller,
       fit: BoxFit.contain,
     ));
   }

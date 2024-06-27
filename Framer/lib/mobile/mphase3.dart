@@ -8,13 +8,13 @@ class Mphase3 extends StatelessWidget {
     return Container(
     // height: MediaQuery.of(context).size.width * 1.3,
     decoration: BoxDecoration(
-    color: Color.fromARGB(166, 231, 185, 78),
+    // color: Color.fromARGB(166, 231, 185, 78),
     borderRadius: BorderRadius.circular(30)),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(75, 0, 0, 0),
+            padding: EdgeInsetsDirectional.fromSTEB(80 , 0, 0, 0),
             child:
                 Column(
                 crossAxisAlignment: CrossAxisAlignment.start, children: [
@@ -62,7 +62,7 @@ class Mphase3 extends StatelessWidget {
                                 Container(
                                 width: MediaQuery.of(context).size.width * 0.7,
                                   child: Text(
-                                    'Develop timelines and project milestones.',
+                                    'Develop timelines and milestones, allocate resources, assign tasks, estimate costs, and create budgets to ensure efficient project management.',
                                     style: TextStyle(
                                       // decoration: TextDecoration.lineThrough,
                                       decoration: TextDecoration.none,
@@ -74,45 +74,7 @@ class Mphase3 extends StatelessWidget {
                                   ),
                                 ),
                               ]),
-                          Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            // Anime2(),
-                            Container(
-                            width: MediaQuery.of(context).size.width * 0.7,
-                              child: Text(
-                                'Allocate resources and assign tasks.',
-                                style: TextStyle(
-                                  // decoration: TextDecoration.lineThrough,
-                                  decoration: TextDecoration.none,
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.normal,
-                                  // decoration: TextDecoration.none,/
-                                  fontSize: 20,
-                                ),
-                              ),
-                            ),
-                          ]),
-                          Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                            children :[ 
-                            // Anime2(),
-                            Container(
-                            width: MediaQuery.of(context).size.width * 0.7,
-                              child: Text(
-                                'Estimate costs and create budgets.',
-                                style: TextStyle(
-                                  // decoration: TextDecoration.lineThrough,
-                                  color: Colors.black,
-                                  decoration: TextDecoration.none,
-                                  fontWeight: FontWeight.normal,
-                                  // decoration: TextDecoration.none,/
-                                  fontSize: 20,
-                                ),
-                              ),
-                            ),
-                            ]
-                          ),
+                       
                           
                         ]),
               )

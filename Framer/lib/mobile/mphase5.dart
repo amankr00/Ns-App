@@ -6,7 +6,7 @@ class Mphase5 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
     decoration: BoxDecoration(
-    color: Color.fromARGB(255, 141, 202, 8),
+    // color: Color.fromARGB(255, 141, 202, 8),
     borderRadius: BorderRadius.circular(30)
     ),
       child: Column(
@@ -23,7 +23,7 @@ class Mphase5 extends StatelessWidget {
           ),
           // ),
       
-          Padding(padding: EdgeInsets.only(left : 45 , top : 30),
+          Padding(padding: EdgeInsets.only(left : 80 , top : 30),
       
           child :
           Column(
@@ -87,11 +87,10 @@ class Mphase5 extends StatelessWidget {
                           Row(
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
-                                Anime2(),
                                 Container(
                                 width: MediaQuery.of(context).size.width * 0.7,
                                   child: Text(
-                                    'Ensure legal and regulatory measures.',
+                                    'Ensure adherence to legal and data security standards by following regulations, implementing robust protocols, and regularly auditing for risks.',
                                     style: TextStyle(
                                       // decoration: TextDecoration.lineThrough,
                                       decoration: TextDecoration.none,
@@ -103,49 +102,11 @@ class Mphase5 extends StatelessWidget {
                                   ),
                                 ),
                               ]),
-                          Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Anime2(),
-                            Container(
-                            width: MediaQuery.of(context).size.width * 0.7,
-                              child: Text(
-                                'Implement robust data protection .',
-                                style: TextStyle(
-                                  // decoration: TextDecoration.lineThrough,
-                                  decoration: TextDecoration.none,
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.normal,
-                                  // decoration: TextDecoration.none,/
-                                  fontSize: 20,
-                                ),
-                              ),
-                            ),
-                          ]),
-                          Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          // crossAxisAlignment: CrossAxisAlignment.center,
-                            children :[ 
-                            Anime2(),
-                            Container(
-                            width: MediaQuery.of(context).size.width * 0.7,
-                              child: Text(
-                                'Conduct regular security audits.',
-                                style: TextStyle(
-                                  // decoration: TextDecoration.lineThrough,
-                                  color: Colors.black,
-                                  decoration: TextDecoration.none,
-                                  fontWeight: FontWeight.normal,
-                                  // decoration: TextDecoration.none,/
-                                  fontSize: 20,
-                                ),
-                              ),
-                            ),
-                            ]
-                          ),
+                       
                           
                         ]),
-              )
+              ),
+              SizedBox(height: 30,),
             ],
           )
           )

@@ -11,7 +11,9 @@ class Mphase4 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        height: 400,
+        // width: MediaQuery.of(context).size.width * 0.2,
+        // height: MediaQuery.of(context).size.height * 1,
+        color: Colors.green,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -29,14 +31,8 @@ class Mphase4 extends StatelessWidget {
                 height: 90,
               ),
               Container(
-                  // child : Text('"Framer has been a game-changer in enabling us to bring all stakeholders on board with what the final product experience should actually feel like."',
-                  // style: TextStyle(
-                  // color: Colors.black,),)
-
-                  // width: 600,
-                  // height: 100,
-                  // color: Colors.green,
-                  width: MediaQuery.of(context).size.width * 0.5,
+                  width: MediaQuery.of(context).size.width * 0.6,
+                  color : Colors.purple,
                   child: RichText(
                     textAlign: TextAlign.justify,
                     text: TextSpan(
@@ -74,7 +70,7 @@ class Mphase4 extends StatelessWidget {
                     ),
                   )),
               Container(
-                width: 220,
+                width: 300,
                 height: 50,
                 // color: Colors.blue,
                 child: Row(
@@ -101,18 +97,18 @@ class Mphase4 extends StatelessWidget {
                 ),
               )
             ]),
-              Container(
-  // width: 200,
-  height: 3,
-  decoration: BoxDecoration(
-    border: Border.all(
-      color: const Color.fromARGB(255, 104, 105, 106), // Border color
-      width: 2.0, // Border width
-    ),
-    borderRadius: BorderRadius.circular(10), // Rounded corners
-  ),
-  
-)
+            Container(
+              // width: 200,
+              height: 3,
+              decoration: BoxDecoration(
+                border: Border.all(
+                  color:
+                      const Color.fromARGB(255, 104, 105, 106), // Border color
+                  width: 2.0, // Border width
+                ),
+                borderRadius: BorderRadius.circular(10), // Rounded corners
+              ),
+            )
           ],
         ));
   }

@@ -58,40 +58,43 @@ class _MyAppState extends State<MPhase4Viewer> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Expanded(
-          child: PageView(
-            controller: controller,
-            physics: NeverScrollableScrollPhysics(),
-            scrollDirection: Axis.horizontal,
-            children: [
-              Mphase4(
-                  "1",
-                  "Shri Pranav Kumar, I.A.S. Secretary, Home Department, Bihar",
-                  " Samaksh App was my Idea to ensure teacher's punctuality and to increase student's daily turnout. I am glad that Nishant puts his best efförts to develop this app. After a year of evaluation, this app tums out to be very efficient and effective and bring about a positive change in this regard and also the school's opening punctuality increases to 96% within a year."),
-              Mphase4("4", "5", "6"),
-              Mphase4("7", "8", "9"),
-              Mphase4("10", "11", "12"),
-            ],
-          ),
-        ),
-        Padding(
-          padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 10),
-          child: SmoothPageIndicator(
-            controller: controller,
-            count: 4,
-            effect: ScrollingDotsEffect(
-              dotWidth: 12.0,
-              dotHeight: 12.0,
-              strokeWidth: 1,
-              fixedCenter: true,
-              paintStyle: PaintingStyle.stroke,
-              dotColor: Colors.orange,
+    return Container(
+    color : Colors.blue,
+      child: Column(
+        children: [
+          Expanded(
+            child: PageView(
+              controller: controller,
+              physics: NeverScrollableScrollPhysics(),
+              scrollDirection: Axis.horizontal,
+              children: [
+                Mphase4(
+                    "1",
+                    "Shri Pranav Kumar, I.A.S. Secretary, Home Department, Bihar",
+                    " Samaksh App was my Idea to ensure teacher's punctuality and to increase student's daily turnout. I am glad that Nishant puts his best efförts to develop this app. After a year of evaluation, this app tums out to be very efficient and effective and bring about a positive change in this regard and also the school's opening punctuality increases to 96% within a year."),
+                Mphase4("4", "5", "6"),
+                Mphase4("7", "8", "9"),
+                Mphase4("10", "11", "12"),
+              ],
             ),
           ),
-        ),
-      ],
+          Padding(
+            padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 10),
+            child: SmoothPageIndicator(
+              controller: controller,
+              count: 4,
+              effect: ScrollingDotsEffect(
+                dotWidth: 12.0,
+                dotHeight: 12.0,
+                strokeWidth: 1,
+                fixedCenter: true,
+                paintStyle: PaintingStyle.stroke,
+                dotColor: Colors.orange,
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

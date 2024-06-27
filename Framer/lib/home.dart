@@ -317,11 +317,12 @@ class _MobileLyState extends State<MobileLy> {
           SizedBox(height: 30,),
           // MPhase4Viewer(),
            Padding(
-                  padding: EdgeInsets.only(top: 100),
+                  padding: EdgeInsets.only(top: 30 , bottom: 30),
                   child: Container(
                       height: MediaQuery.of(context).size.width * 0.8,
                       color: Color.fromRGBO(243, 239, 239, 0.561),
-                      child: MPhase4Viewer())),
+                      child: MPhase4Viewer()
+                      )),
           SizedBox(height: 30,),
           MAnime2(),
           SizedBox(height: 30,),
