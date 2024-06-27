@@ -5,7 +5,10 @@ class Mphase6 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+    decoration: BoxDecoration(
     color: Color.fromARGB(255, 225, 117, 23),
+    borderRadius: BorderRadius.circular(30)
+    ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [

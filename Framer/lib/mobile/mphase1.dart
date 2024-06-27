@@ -131,18 +131,18 @@ class _Mphase1State extends State<Mphase1> {
               // ).animate().fade(duration: 500.ms).slideX(begin: 1, end: 0),
         )
         ),
-        Container(
-  // width: 200,
-  height: 3,
-  decoration: BoxDecoration(
-    border: Border.all(
-      color: const Color.fromARGB(255, 104, 105, 106), // Border color
-      width: 2.0, // Border width
-    ),
-    borderRadius: BorderRadius.circular(10), // Rounded corners
-  ),
+//         Container(
+//   // width: 200,
+//   height: 3,
+//   decoration: BoxDecoration(
+//     border: Border.all(
+//       color: const Color.fromARGB(255, 104, 105, 106), // Border color
+//       width: 2.0, // Border width
+//     ),
+//     borderRadius: BorderRadius.circular(10), // Rounded corners
+//   ),
   
-)
+// )
 
       ],
     );

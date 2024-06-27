@@ -6,7 +6,10 @@ class Mphase3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-    color: Color.fromARGB(255, 4, 144, 132),
+    // height: MediaQuery.of(context).size.width * 1.3,
+    decoration: BoxDecoration(
+    color: Color.fromARGB(166, 231, 185, 78),
+    borderRadius: BorderRadius.circular(30)),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
@@ -15,7 +18,7 @@ class Mphase3 extends StatelessWidget {
             child:
                 Column(
                 crossAxisAlignment: CrossAxisAlignment.start, children: [
-                SizedBox(height: 60,),
+                SizedBox(height: 30,),
               Container(
                   width: MediaQuery.of(context).size.width * 0.7,
                   // color: Colors.purple,
@@ -48,7 +51,7 @@ class Mphase3 extends StatelessWidget {
                     ),
                   ]))),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0, 50, 0, 0),
+                padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 0),
                 child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -116,26 +119,17 @@ class Mphase3 extends StatelessWidget {
             ]),
           ),
           Container(
-              // width: 750,
-              // height: 700,
-              width: MediaQuery.of(context).size.width * 0.8,
+              // color: Colors.purple,
+              // width: MediaQuery.of(context).size.width * 0.9,
+              // height: MediaQuery.of(context).size.height * 0.4,
               child: ClipRect(
                   child: Image.asset(
+                  // width: MediaQuery.of(context).size.width * 0.8,
+                  // height: MediaQuery.of(context).size.height * 0.6,
                 'assets/images/lowlogo2.png',
-                fit: BoxFit.cover,
+                fit: BoxFit.fitWidth
               ))),
-                Container(
-        // width: 200,
-        height: 3,
-        decoration: BoxDecoration(
-      border: Border.all(
-        color: const Color.fromARGB(255, 104, 105, 106), // Border color
-        width: 2.0, // Border width
-      ),
-      borderRadius: BorderRadius.circular(10), // Rounded corners
-        ),
-        
-      )
+             
         ],
       ),
     );

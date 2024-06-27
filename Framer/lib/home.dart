@@ -1,4 +1,6 @@
 import 'dart:async';
+import 'package:framer/mobile/appAnime.dart';
+import 'package:framer/mobile/lineAnime.dart';
 import 'package:framer/mobile/mphase1.dart';
 import 'package:framer/mobile/mphase2.dart';
 import 'package:framer/mobile/mphase3.dart';
@@ -302,8 +304,17 @@ class _MobileLyState extends State<MobileLy> {
         children: [
           Navbar(),
           Mphase1(pRt, pLt),
+          SizedBox(height: 30,),
+          MAnime2(),
+          SizedBox(height: 30,),
           Mphase2(),
+          SizedBox(height: 30,),
+          MAnime2(),
+          SizedBox(height: 30,),
           Mphase3(),
+          SizedBox(height: 30,),
+          MAnime2(),
+          SizedBox(height: 30,),
           // MPhase4Viewer(),
            Padding(
                   padding: EdgeInsets.only(top: 100),
@@ -311,8 +322,17 @@ class _MobileLyState extends State<MobileLy> {
                       height: MediaQuery.of(context).size.width * 0.8,
                       color: Color.fromRGBO(243, 239, 239, 0.561),
                       child: MPhase4Viewer())),
+          SizedBox(height: 30,),
+          MAnime2(),
+          SizedBox(height: 30,),
           Mphase5(),
+          SizedBox(height: 30,),
+          MAnime2(),
+          SizedBox(height: 30,),
           Mphase6(), 
+          SizedBox(height: 30,),
+          MAnime2(),
+          SizedBox(height: 30,),
           Mphase7(),           
 
         ],

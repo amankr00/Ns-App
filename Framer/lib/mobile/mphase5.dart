@@ -5,18 +5,18 @@ class Mphase5 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+    decoration: BoxDecoration(
     color: Color.fromARGB(255, 141, 202, 8),
+    borderRadius: BorderRadius.circular(30)
+    ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           SizedBox(height: 40,),
           Container(
-            // width: 750,
-            // height: 700,
-            width: MediaQuery.of(context).size.width * 0.9,
-            color: Colors.purple,
             child: ClipRRect(
                 child: Image.asset(
+            // width: MediaQuery.of(context).size.width * 0.9,
               'assets/images/lowlogo3.png',
               fit: BoxFit.fitWidth,
             )),
