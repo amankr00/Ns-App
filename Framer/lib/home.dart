@@ -1,6 +1,11 @@
 import 'dart:async';
 import 'package:framer/mobile/mphase1.dart';
 import 'package:framer/mobile/mphase2.dart';
+import 'package:framer/mobile/mphase3.dart';
+import 'package:framer/mobile/mphase5.dart';
+import 'package:framer/mobile/mphase6.dart';
+import 'package:framer/mobile/mphase7.dart';
+import 'package:framer/mobile/mphaseViewer.dart';
 import 'package:framer/mobile/navbar.dart';
 import 'package:framer/phases/anime3.dart';
 import 'package:flutter/cupertino.dart';
@@ -68,97 +73,6 @@ class _HomeMainState extends State<HomeMain> {
     return GestureDetector(
       child: Scaffold(
         backgroundColor: const Color.fromARGB(255, 255, 255, 255),
-        // appBar: AppBar(
-        //   toolbarHeight: MediaQuery.of(context).size.height * 0.08,
-        //   backgroundColor: Color.fromARGB(255, 255, 255, 255),
-        //   title: Row(
-        //     mainAxisAlignment: MainAxisAlignment
-        //         .spaceAround, // Aligns widgets horizontally with space between them
-        //     children: <Widget>[
-        //       // Add an icon or any widget you want
-        //       // The title of the AppBar
-        //       // Icon(Icons.settings),
-        //       Text(
-        //         'NS APPS INNOVATIONS',
-        //         style: GoogleFonts.rubik(
-        //             fontSize: 20,
-        //             letterSpacing: 0,
-        //             fontWeight: FontWeight.w400,
-        //             decoration: TextDecoration.none,
-        //             color: const Color.fromARGB(255, 0, 0, 0)),
-        //       ),
-
-        //       Container(
-        //           // Navbar Open Framer
-        //           width: MediaQuery.of(context).size.width * 0.11,
-        //           height: MediaQuery.of(context).size.height * 0.06,
-        //           decoration: BoxDecoration(
-        //             color: Colors.blue,
-        //             borderRadius: BorderRadius.circular(20),
-        //           ),
-        //           child: Padding(
-        //             padding: EdgeInsets.all(
-        //                 12.0), // Add 16 pixels of padding on all sides
-
-        //             child: Row(
-        //               // Image and text
-
-        //               mainAxisAlignment: MainAxisAlignment.spaceAround,
-
-        //               children: [
-        //                 ClipRRect(
-        //                     child: Image.asset(
-        //                   'assets/images/play.png',
-        //                   width: 40,
-        //                   height: 40,
-        //                 )),
-        //                 Text('Open Play Store',
-        //                     style: GoogleFonts.raleway(
-        //                         textStyle: TextStyle(
-        //                       fontSize: 16,
-        //                       letterSpacing: 0,
-        //                       fontWeight: FontWeight.w500,
-        //                       decoration: TextDecoration.none,
-        //                       color: Color.fromARGB(255, 255, 255, 255),
-        //                     )))
-        //               ],
-        //             ),
-        //           )) // Another icon or widget
-        //     ],
-        //   ),
-        // ),
-        // drawer: Drawer(
-        //   child: ListView(
-        //     padding: EdgeInsets.zero,
-        //     children: <Widget>[
-        //       DrawerHeader(
-        //         child: Text(
-        //           'NS APPS INNOVATIONS',
-        //           style: TextStyle(color: Colors.white, fontSize: 24),
-        //         ),
-        //         decoration: BoxDecoration(
-        //           color: Colors.blue,
-        //         ),
-        //       ),
-        //       ListTile(
-        //         leading: Icon(Icons.home),
-        //         title: Text('Home'),
-        //         onTap: () {
-        //           // Navigate to home screen
-        //           Navigator.pop(context);
-        //         },
-        //       ),
-        //       ListTile(
-        //         leading: Icon(Icons.settings),
-        //         title: Text('Settings'),
-        //         onTap: () {
-        //           // Navigate to settings screen
-        //           Navigator.pop(context);
-        //         },
-        //       ),
-        //     ],
-        //   ),
-        // ),
         body: SafeArea(
             top: true,
             child: ScreenTypeLayout.builder(
@@ -380,7 +294,7 @@ class _MobileLyState extends State<MobileLy> {
       }
     }
     return Scaffold(
-    // backgroundColor: Colors.blue,
+    backgroundColor: Color.fromARGB(255, 255, 255, 255),
     body : SingleChildScrollView(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -389,6 +303,18 @@ class _MobileLyState extends State<MobileLy> {
           Navbar(),
           Mphase1(pRt, pLt),
           Mphase2(),
+          Mphase3(),
+          // MPhase4Viewer(),
+           Padding(
+                  padding: EdgeInsets.only(top: 100),
+                  child: Container(
+                      height: MediaQuery.of(context).size.width * 0.8,
+                      color: Color.fromRGBO(243, 239, 239, 0.561),
+                      child: MPhase4Viewer())),
+          Mphase5(),
+          Mphase6(), 
+          Mphase7(),           
+
         ],
       ),
     )

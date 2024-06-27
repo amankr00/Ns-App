@@ -36,11 +36,8 @@ class _Mphase1State extends State<Mphase1> {
                 children: [
                   // Container(height:50),
                   Padding(
-                      padding: EdgeInsets.only(bottom: 30.0, top: 30.0 , left : 40.0),
+                      padding: EdgeInsets.only(bottom: 30.0, top: 30.0 , left : 0.0),
                       child: Container(
-                      // color: Colors.purple,
-                          // width: 500,
-                          // height: 140,
                           width: MediaQuery.of(context).size.width * 0.7,
                           alignment: Alignment.center,
                           // height: MediaQuery.of(context).size.height * 0.27,
@@ -58,7 +55,7 @@ class _Mphase1State extends State<Mphase1> {
                                     letterSpacing: 0,
                                     fontWeight: FontWeight.w500,
                                     decoration: TextDecoration.none,
-                                    color: const Color.fromARGB(255, 0, 0, 0),
+                                    color: Color.fromARGB(255, 0, 0, 0),
                                   ),
                                 ),
                               ),
@@ -76,7 +73,31 @@ class _Mphase1State extends State<Mphase1> {
                               )
                             ]),
                           ])))),
+
                           // SizedBox(height: 20,),
+                        Padding(padding: EdgeInsets.only(left : 30 , right : 30),
+                          child : Container(
+                          width: MediaQuery.of(context).size.width * 0.7 ,
+                          child: RichText(
+                          textAlign: TextAlign.center,
+                          text : TextSpan(children: [
+                            TextSpan(children: [
+                              TextSpan(
+                              text : "Turning your vision into innovative apps, we create custom solutions that drive success and foster growth in the digital realm.",
+                              style: GoogleFonts.bebasNeue(
+                                  textStyle: TextStyle(
+                                    fontSize: 20,
+                                    letterSpacing: 0,
+                                    fontWeight: FontWeight.w500,
+                                    decoration: TextDecoration.none,
+                                    color: Color.fromARGB(255, 0, 0, 0),
+                                  ),
+                                ),
+                              )])])
+              )
+
+              ),
+              ),
                  
                   Padding(
                     padding: EdgeInsets.only(top: 0),
@@ -110,6 +131,19 @@ class _Mphase1State extends State<Mphase1> {
               // ).animate().fade(duration: 500.ms).slideX(begin: 1, end: 0),
         )
         ),
+        Container(
+  // width: 200,
+  height: 3,
+  decoration: BoxDecoration(
+    border: Border.all(
+      color: const Color.fromARGB(255, 104, 105, 106), // Border color
+      width: 2.0, // Border width
+    ),
+    borderRadius: BorderRadius.circular(10), // Rounded corners
+  ),
+  
+)
+
       ],
     );
   }
