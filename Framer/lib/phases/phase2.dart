@@ -97,26 +97,27 @@ class phase2 extends StatelessWidget {
                   child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              // Anime2(),
-                              Container(
-                              width: 450,
-                              height: MediaQuery.of(context).size.height * 0.3,
-                                child: Text(
-                                  'We begin by meeting clients to understand their needs and project goals. They conduct feasibility studies to assess viability, define project scope, and create detailed requirement specifications for clarity and alignment.',
-                                    style : TextStyle(
-                          fontSize: 20,
-                          fontFamily: 'Inter',
-                          letterSpacing: 0,
-                          fontWeight: FontWeight.w500,
-                          decoration: TextDecoration.none,
-                          color: Color.fromARGB(255, 0, 0, 0),
-                        ))
-                              )
-                            ]),
+                         Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                // Anime2(),
+                                Container(
+                                  // color : Colors.blueAccent,
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.3,
+                                  // height: MediaQuery.of(context).size.height * 0.3,
+                                  child: Text(
+                                      "Conduct stakeholder interviews and surveys to identify client goals, pain points, and requirements for a clear project scope statement.",
+                                      style:TextStyle(
+                                        fontSize: 20,
+                                        fontFamily: 'Inter',
+                                        letterSpacing: 0,
+                                        fontWeight: FontWeight.w500,
+                                        decoration: TextDecoration.none,
+                                        color: Color.fromARGB(255, 0, 0, 0),
+                                      )))
+                              ]),
                       
                         
                       ]),

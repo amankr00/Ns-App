@@ -49,61 +49,27 @@ class phase3 extends StatelessWidget {
               child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              Anime2(),
-                              Container(
-                                child: Text(
-                                  'Develop timelines and project milestones.',
-                                  style: TextStyle(
-                                    // decoration: TextDecoration.lineThrough,
-                                    decoration: TextDecoration.none,
-                                    color: Colors.black,
-                                    fontWeight: FontWeight.normal,
-                                    // decoration: TextDecoration.none,/
-                                    fontSize: 20,
-                                  ),
-                                ),
-                              ),
-                            ]),
-                        Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          Anime2(),
-                          Container(
-                            child: Text(
-                              'Allocate resources and assign tasks.',
-                              style: TextStyle(
-                                // decoration: TextDecoration.lineThrough,
-                                decoration: TextDecoration.none,
-                                color: Colors.black,
-                                fontWeight: FontWeight.w500,
-                                // decoration: TextDecoration.none,/
-                                fontSize: 25,
-                              ),
-                            ),
-                          ),
-                        ]),
-                        Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                          children :[ 
-                          Anime2(),
-                          Container(
-                            child: Text(
-                              'Estimate costs and create budgets.',
-                              style: TextStyle(
-                                // decoration: TextDecoration.lineThrough,
-                                color: Colors.black,
-                                decoration: TextDecoration.none,
-                                fontWeight: FontWeight.w500,
-                                // decoration: TextDecoration.none,/
-                                fontSize: 25,
-                              ),
-                            ),
-                          ),
-                          ]
-                        ),
+                         Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                // Anime2(),
+                                Container(
+                                  // color : Colors.blueAccent,
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.3,
+                                  // height: MediaQuery.of(context).size.heght * 0.3,
+                                  child: Text(
+                                      "Conduct stakeholder interviews and surveys to identify client goals, pain points, and requirements for a clear project scope statement.",
+                                      style:TextStyle(
+                                        fontSize: 20,
+                                        fontFamily: 'Inter',
+                                        letterSpacing: 0,
+                                        fontWeight: FontWeight.w500,
+                                        decoration: TextDecoration.none,
+                                        color: Color.fromARGB(255, 0, 0, 0),
+                                      )))
+                              ]),
                         
                       ]),
             )

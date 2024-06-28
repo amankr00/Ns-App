@@ -305,7 +305,22 @@ class _MobileLyState extends State<MobileLy> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Navbar(),
-              Mphase1(pRt, pLt),
+              Container(
+                  child: Stack(children: [
+                  Container(
+                        width: MediaQuery.of(context).size.width * 1,
+                        // height: MediaQuery.of(context).size.height * 1,
+                        // height: 300,
+                        color: Color.fromRGBO(255, 255, 255, 0.7),
+                        child: ClipRect(
+                            child: Opacity(
+                          opacity:
+                              0.3, // Adjust the opacity level (0.0 - fully transparent, 1.0 - fully opaque)
+                          child: Image.asset('assets/images/pex.jpg'),
+                        ))),
+                    Mphase1(pRt, pLt),
+                    
+                  ])),
               SizedBox(
                 height: 30,
               ),

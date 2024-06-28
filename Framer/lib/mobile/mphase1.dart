@@ -19,7 +19,8 @@ class _Mphase1State extends State<Mphase1> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return Padding(padding: EdgeInsets.only(left : 50),
+    child : Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         // left body
@@ -120,7 +121,7 @@ class _Mphase1State extends State<Mphase1> {
         )
         ),
       ],
-    );
+    ));
   }
 }
 
