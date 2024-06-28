@@ -137,7 +137,7 @@ class _HoverEffectExample1State extends State<HoverEffectExample1> {
               top: 0,
               // right: 0,
               child: Container(
-                  height: MediaQuery.of(context).size.height * 0.5,
+                  height: MediaQuery.of(context).size.height * 0.3,
                   // color: Colors.green,
                   child: ClipRect(
                     child: Image.asset(
@@ -155,16 +155,20 @@ class _HoverEffectExample1State extends State<HoverEffectExample1> {
                     SizedBox(
                       height: MediaQuery.of(context).size.height * 0.05,
                     ),
-                    Text(
-                      'GET YOUR OWN APP TODAY',
-                      style: TextStyle(
-                          fontSize: 50,
-                          fontFamily: 'ArchivoBlack-Regular',
-                          letterSpacing: 0,
-                          fontWeight: FontWeight.w100,
-                          decoration: TextDecoration.none,
-                          color: Color(0xff5C6B8B),
-                        ),
+                    Padding(
+                      padding: const EdgeInsets.only(left : 12.0 , right : 12.0),
+                      child: Text(
+                        'GET YOUR OWN APP TODAY',
+                        textAlign : TextAlign.center,
+                        style: TextStyle(
+                            fontSize: 30,
+                            fontFamily: 'ArchivoBlack-Regular',
+                            letterSpacing: 0,
+                            fontWeight: FontWeight.w100,
+                            decoration: TextDecoration.none,
+                            color: Color(0xff5C6B8B),
+                          ),
+                      ),
                     ),
                     Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 30),
@@ -189,11 +193,12 @@ class _HoverEffectExample1State extends State<HoverEffectExample1> {
                       height: MediaQuery.of(context).size.width * 0.01,
                     ),
                     Container(
-                      width: MediaQuery.of(context).size.width * 0.20,
+                      width: MediaQuery.of(context).size.width * 0.50,
                       child: Material(
                         // elevation: 3,
                         borderRadius: BorderRadius.circular(60),
-                        color: Color(0xffEFF4FA),
+                        color: Color.fromARGB(43, 187, 192, 197),
+                        // color: Color.fromARGB(255, 59, 132, 156),
                         child: Padding(
                           padding: EdgeInsets.symmetric(horizontal: 20),
                           child: TextField(
@@ -218,11 +223,12 @@ class _HoverEffectExample1State extends State<HoverEffectExample1> {
                       height: MediaQuery.of(context).size.width * 0.008,
                     ),
                     Container(
-                      width: MediaQuery.of(context).size.width * 0.20,
+                      width: MediaQuery.of(context).size.width * 0.50,
                       child: Material(
                         // elevation: 3,
                         borderRadius: BorderRadius.circular(60),
-                        color: Color(0xffEFF4FA),
+                        // color: Color.fromARGB(35, 239, 244, 250),
+                        color: Color.fromARGB(43, 187, 192, 197),
                         child: Padding(
                           padding: EdgeInsets.symmetric(horizontal: 20),
                           child: TextField(
