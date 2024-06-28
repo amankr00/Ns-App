@@ -12,7 +12,7 @@ class Mphase5 extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          SizedBox(height: 40,),
+          // SizedBox(height: 40,),
           Container(
             child: ClipRRect(
                 child: Image.asset(

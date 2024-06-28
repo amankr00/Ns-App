@@ -25,6 +25,7 @@ import 'package:framer/phases/phase6.dart';
 import 'package:framer/phases/phase7.dart';
 import 'package:framer/phases/t.dart';
 import 'package:framer/phases/t1.dart';
+import 'package:framer/phases/video.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -214,6 +215,7 @@ class _HomeMainState extends State<HomeMain> {
               ),
 
               phase7(),
+              // VideoPlayerScreen(),
               // test(),
             ],
           ),
@@ -340,7 +342,7 @@ class _MobileLyState extends State<MobileLy> {
               ),
               MAnime2(),
               SizedBox(
-                height: 30,
+                height: 17,
               ),
               Mphase5(),
               SizedBox(
