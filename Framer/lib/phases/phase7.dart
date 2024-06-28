@@ -26,7 +26,7 @@ class phase7 extends StatelessWidget {
                     fontSize: 50,
                     fontWeight: FontWeight.bold,
                     decoration: TextDecoration.none,
-                    color: const Color.fromARGB(255, 255, 255, 255))),
+                    color: Color.fromARGB(255, 0, 0, 0))),
           ),
           SizedBox(
             height: 20,
@@ -35,7 +35,7 @@ class phase7 extends StatelessWidget {
               width: 300,
               height: 60,
               decoration: BoxDecoration(
-                color: Color.fromARGB(255, 248, 248, 248),
+                color: Color.fromARGB(255, 255, 255, 255),
                 borderRadius: BorderRadius.circular(50),
               ),
               child:

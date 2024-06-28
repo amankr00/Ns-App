@@ -1,24 +1,58 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:framer/phases/anime2.dart';
 
-class Mphase2 extends StatelessWidget {
-  get context => null;
+
+// class SlidingContainer extends StatefulWidget {
+//   @override
+//   _SlidingContainerState createState() => _SlidingContainerState();
+// }
+
+// class _SlidingContainerState extends State<SlidingContainer> {
+
+class Mphase2 extends StatefulWidget {
+  // get context => null;
+  _Mphase2State createState() => _Mphase2State();
+}
+
+class _Mphase2State extends State<Mphase2> {
+  bool _visible = true;
+
+
+  @override
+  void initState() {
+    super.initState();
+    Future.delayed(Duration.zero, () {
+      setState(() {
+        _visible = !_visible;
+      });
+    });
+  }
+
+  
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SingleChildScrollView(
+    child : AnimatedContainer(
       height: MediaQuery.of(context).size.width * 1.3,
       width: MediaQuery.of(context).size.width * 0.85,
-
+      duration: Duration(seconds: 3),
+      curve: Curves.easeInOut,
+      transform: Matrix4.translationValues(
+        _visible
+            ? MediaQuery.of(context).size.width * -0.5
+            : 0, // x-axis translation
+        0, // y-axis translation, adjust if needed
+        0, // z-axis translation, adjust if needed
+      ),
       decoration: BoxDecoration(
-          // color: Color.fromARGB(255, 10, 185, 185), 
+          // color: Color.fromARGB(255, 10, 185, 185),
           border: Border.all(
-          color: Color(0xff721FF9), // Border color
-          width: 3,           // Border width
-        ),
-      color: Color.fromARGB(58, 208, 129, 222),
+            color: Color(0xff721FF9), // Border color
+            width: 3, // Border width
+          ),
+          color: Color.fromARGB(58, 208, 129, 222),
           borderRadius: BorderRadius.circular(30)),
       child: Column(
         // Purple image and Right - side text
@@ -114,7 +148,7 @@ class Mphase2 extends StatelessWidget {
                     width: MediaQuery.of(context).size.width * 0.7,
                     //  height: MediaQuery.of(context).size.height * 0.7,
                     // height: 300,
-                    child:Column(
+                    child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Row(
@@ -123,20 +157,21 @@ class Mphase2 extends StatelessWidget {
                               children: [
                                 // Anime2(),
                                 Container(
-                                  // color : Colors.blueAccent,
-                                  width:
-                                      MediaQuery.of(context).size.width * 0.7,
-                                  // height: MediaQuery.of(context).size.height * 0.3,
-                                  child: Text(
-                                      "Conduct stakeholder interviews and surveys to identify client goals, pain points, and requirements for a clear project scope statement.",
-                                      style:TextStyle(
-                                        fontSize: 20,
-                                        fontFamily: 'Inter',
-                                        letterSpacing: 0,
-                                        fontWeight: FontWeight.w500,
-                                        decoration: TextDecoration.none,
-                                        color: Color.fromARGB(255, 0, 0, 0),
-                                      )))
+                                    // color : Colors.blueAccent,
+                                    width:
+                                        MediaQuery.of(context).size.width * 0.7,
+                                    // height: MediaQuery.of(context).size.height * 0.3,
+                                    child: Text(
+                                        "Conduct stakeholder interviews and surveys to identify client goals, pain points, and requirements for a clear project scope statement.",
+                                        style: TextStyle(
+                                          fontSize: 20,
+                                          fontFamily: 'Inter',
+                                          letterSpacing: 0,
+                                          fontWeight: FontWeight.w500,
+                                          decoration: TextDecoration.none,
+                                          // color: Color.fromARGB(255, 0, 0, 0),
+                                          color : Color(0xffFFD700)
+                                        )))
                               ]),
                         ]),
                   ))
@@ -144,6 +179,6 @@ class Mphase2 extends StatelessWidget {
           ),
         ],
       ),
-    );
+    ));
   }
 }

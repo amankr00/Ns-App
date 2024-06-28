@@ -30,7 +30,7 @@ class phase3 extends StatelessWidget {
                   TextSpan(
                     text: 'Allocating resources and ',
                     style: TextStyle(
-                      color: const Color.fromARGB(255, 3, 3, 3),
+                      color: Color.fromARGB(255, 0, 0, 0),
                       fontSize: 50,
                       fontWeight: FontWeight.bold,
                     ),

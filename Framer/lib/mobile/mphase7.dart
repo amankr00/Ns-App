@@ -15,12 +15,12 @@ class Mphase7 extends StatelessWidget {
       child: Column(
         children: [
           SizedBox(
-            height: 90,
+            height: 50,
           ),
           Container(
             // height: MediaQuery.of(context).size.height * 0.,
             width: MediaQuery.of(context).size.width * 0.8,
-            child: Text('Get started with framer today',
+            child: Text('Get your own app today',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                     fontSize: 50,

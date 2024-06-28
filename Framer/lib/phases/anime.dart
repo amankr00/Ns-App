@@ -31,12 +31,12 @@ class _AnimeState extends State<Anime> {
   Widget _buildUI() {
     return Container(
         child: LottieBuilder.asset(
-      'assets/animations/anime.json',
+      'assets/animations/an.json',
       // controller: _controller,
       width: 50,
       height: 50,
       repeat: true,
-      fit: BoxFit.contain,
+      fit: BoxFit.cover,
     ));
   }
 }

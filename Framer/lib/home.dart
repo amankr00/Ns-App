@@ -9,6 +9,7 @@ import 'package:framer/mobile/mphase6.dart';
 import 'package:framer/mobile/mphase7.dart';
 import 'package:framer/mobile/mphaseViewer.dart';
 import 'package:framer/mobile/navbar.dart';
+import 'package:framer/mobile/test.dart';
 import 'package:framer/phases/anime3.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -26,6 +27,7 @@ import 'package:framer/phases/phase7.dart';
 import 'package:framer/phases/t.dart';
 import 'package:framer/phases/t1.dart';
 import 'package:framer/phases/video.dart';
+import 'package:framer/testHome.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -94,11 +96,11 @@ class _HomeMainState extends State<HomeMain> {
     double pLt = MediaQuery.of(context).size.width;
     bool _isDrawerOpen = false;
 
-    void _toggleDrawer() {
-      setState(() {
-        _isDrawerOpen = !_isDrawerOpen;
-      });
-    }
+    // void _toggleDrawer() {
+    //   setState(() {
+    //     _isDrawerOpen = !_isDrawerOpen;
+    //   });
+    // }
 
     // void pr(int prt)
     // {
@@ -300,45 +302,38 @@ class _MobileLyState extends State<MobileLy> {
     return Scaffold(
         // backgroundColor: Color.fromARGB(255, 0, 0, 0),
         body: Stack(
-          children : [
-
-          Container(
+        children: [
+      Container(
           width: MediaQuery.of(context).size.width * 1,
           height: MediaQuery.of(context).size.height * 1,
           // color: Colors.purple,
           // height: 300,
-          child : ClipRect(
-          child: Image.asset('assets/images/bg.jpg',
-          fit : BoxFit.fill
-          ),
+          child: ClipRect(
+            child: Image.asset('assets/images/bg.jpg', fit: BoxFit.fill),
           )),
-
-          Column(
-          children : [
-          Navbar(),
-          Expanded(
-          child : 
-          SingleChildScrollView(
-          child : Column(
+      Column(children: [
+        Navbar(),
+        Expanded(
+          child: SingleChildScrollView(
+              child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
                   child: Stack(children: [
-                  // Container(
-                  //       width: MediaQuery.of(context).size.width * 1,
-                  //       // height: MediaQuery.of(context).size.height * 1,
-                  //       // height: 300,
-                  //       color: Color.fromRGBO(255, 255, 255, 0.7),
-                  //       child: ClipRect(
-                  //           child: Opacity(
-                  //         opacity:
-                  //             0.3, // Adjust the opacity level (0.0 - fully transparent, 1.0 - fully opaque)
-                  //         child: Image.asset('assets/images/pex.jpg'),
-                  //       ))),
-                    Mphase1(pRt, pLt),
-                    
-                  ])),
+                // Container(
+                //       width: MediaQuery.of(context).size.width * 1,
+                //       // height: MediaQuery.of(context).size.height * 1,
+                //       // height: 300,
+                //       color: Color.fromRGBO(255, 255, 255, 0.7),
+                //       child: ClipRect(
+                //           child: Opacity(
+                //         opacity:
+                //             0.3, // Adjust the opacity level (0.0 - fully transparent, 1.0 - fully opaque)
+                //         child: Image.asset('assets/images/pex.jpg'),
+                //       ))),
+                Mphase1(pRt, pLt),
+              ])),
               SizedBox(
                 height: 30,
               ),
@@ -347,6 +342,8 @@ class _MobileLyState extends State<MobileLy> {
                 height: 30,
               ),
               Mphase2(),
+              // ScrollAnimatedWidget(),
+
               SizedBox(
                 height: 30,
               ),
@@ -394,8 +391,11 @@ class _MobileLyState extends State<MobileLy> {
                 height: 30,
               ),
               Mphase7(),
+              
             ],
-          )),)])])
-        );
+          )),
+        )
+      ])
+    ]));
   }
 }

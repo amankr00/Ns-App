@@ -65,7 +65,8 @@ class Mphase3 extends StatelessWidget {
                                 style: TextStyle(
                                   // decoration: TextDecoration.lineThrough,
                                   decoration: TextDecoration.none,
-                                  color: Colors.black,
+                                  // color: Colors.black,
+                                  color : Color(0xffFFD700),
                                   fontFamily: 'Inter',
                                   fontWeight: FontWeight.normal,
                                   // decoration: TextDecoration.none,/

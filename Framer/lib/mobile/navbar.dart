@@ -13,11 +13,10 @@ Container(
         height: 80,
         decoration: BoxDecoration(
           // color: Colors.yellow,
-          color: Colors.white,
+          color: Color.fromARGB(104, 233, 181, 155),
           border: Border(
             bottom: BorderSide(
-              color: Color.fromARGB(
-                  137, 228, 228, 228), // Color of the bottom border
+              color: Color.fromARGB(136, 255, 255, 255), // Color of the bottom border
               width: 3.0, // Width of the bottom border
             ),
           ),

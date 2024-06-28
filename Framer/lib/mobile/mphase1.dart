@@ -19,7 +19,7 @@ class _Mphase1State extends State<Mphase1> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(padding: EdgeInsets.only(left : 20),
+    return Padding(padding: EdgeInsets.only(left : 0),
     child : Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
@@ -85,7 +85,7 @@ class _Mphase1State extends State<Mphase1> {
                               style: TextStyle(
                                     fontSize: 20,
                                     fontFamily: 'bebas-neue',
-                                    letterSpacing: 0,
+                                    letterSpacing: 2,
                                     fontWeight: FontWeight.w500,
                                     decoration: TextDecoration.none,
                                     color: Color.fromARGB(255, 255, 255, 255),
@@ -98,7 +98,7 @@ class _Mphase1State extends State<Mphase1> {
               ),
                  
                   Padding(
-                    padding: EdgeInsets.only(top: 0),
+                    padding: EdgeInsets.only(top: 25),
                     child: HoverEffectExample1()
                         .animate()
                         .fade(delay: 100.ms)
