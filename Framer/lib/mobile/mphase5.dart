@@ -9,7 +9,11 @@ class Mphase5 extends StatelessWidget {
     height: MediaQuery.of(context).size.width * 1.3,
       width: MediaQuery.of(context).size.width * 0.85,
     decoration: BoxDecoration(
-    color: Color.fromARGB(255, 141, 202, 8),
+     border: Border.all(
+          color: Color(0xff06B6FB), // Border color
+          width: 3,           // Border width
+        ),
+    color: Color.fromARGB(91, 226, 124, 168),
     borderRadius: BorderRadius.circular(30)
     ),
       child: Column(

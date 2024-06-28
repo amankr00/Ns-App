@@ -14,7 +14,11 @@ class Mphase2 extends StatelessWidget {
 
       decoration: BoxDecoration(
           // color: Color.fromARGB(255, 10, 185, 185), 
-      color: Color.fromARGB(255, 208, 129, 222),
+          border: Border.all(
+          color: Color(0xff721FF9), // Border color
+          width: 3,           // Border width
+        ),
+      color: Color.fromARGB(58, 208, 129, 222),
           borderRadius: BorderRadius.circular(30)),
       child: Column(
         // Purple image and Right - side text

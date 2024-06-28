@@ -5,10 +5,13 @@ class Mphase6 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-    height: MediaQuery.of(context).size.width * 1.3,
+    height: MediaQuery.of(context).size.width * 1.35,
       width: MediaQuery.of(context).size.width * 0.85,
     decoration: BoxDecoration(
-    color: Color.fromARGB(255, 222, 174, 133),
+    border : Border.all(
+    width: 3,
+    color : Color(0xffE7408F)),
+    color: Color.fromARGB(62, 222, 175, 133),
     borderRadius: BorderRadius.circular(30)
     ),
       child: Column(
