@@ -5,14 +5,16 @@ class Mphase6 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+    height: MediaQuery.of(context).size.width * 1.3,
+      width: MediaQuery.of(context).size.width * 0.85,
     decoration: BoxDecoration(
-    // color: Color.fromARGB(255, 225, 117, 23),
+    color: Color.fromARGB(255, 222, 174, 133),
     borderRadius: BorderRadius.circular(30)
     ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-        Padding(padding: EdgeInsets.only(left : 80),
+        Padding(padding: EdgeInsets.only(left : 40),
           child : Column(
           crossAxisAlignment: CrossAxisAlignment.start,
             children : [
@@ -35,22 +37,6 @@ class Mphase6 extends StatelessWidget {
                         color:Color(0xfffe4d87),
                         fontWeight: FontWeight.bold,
                       )),
-                  TextSpan(
-                      text: 'exploration. ',
-                      style: TextStyle(
-                        fontSize: 50,
-                        color: Color.fromARGB(255, 0, 0, 0),
-                        fontWeight: FontWeight.bold,
-                      )),
-            
-                  // TextSpan(
-                  //     text:
-                  //         '\n\nNothing that you design is lost in translation. Your creations come complete with CSS and JSX code. Framer is also the only prototyping tool that generates animation code which can be used 1:1 in production. ',
-                  //     style: TextStyle(
-                  //       fontSize: 25,
-                  //       color: Color.fromARGB(255, 0, 0, 0),
-                  //       fontWeight: FontWeight.w500,
-                  //     )),
                 ]))),
       
                  Padding(
@@ -84,7 +70,7 @@ class Mphase6 extends StatelessWidget {
                 ]
           ),
           ),
-          SizedBox(height: 40,),
+          SizedBox(height: 17,),
           Container(
           // color: Colors.purple,
             // width: MediaQuery.of(context).size.width * 0.9,

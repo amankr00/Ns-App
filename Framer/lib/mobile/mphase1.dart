@@ -19,7 +19,7 @@ class _Mphase1State extends State<Mphase1> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(padding: EdgeInsets.only(left : 50),
+    return Padding(padding: EdgeInsets.only(left : 20),
     child : Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
@@ -55,7 +55,7 @@ class _Mphase1State extends State<Mphase1> {
                                     letterSpacing: 0,
                                     fontWeight: FontWeight.bold,
                                     decoration: TextDecoration.none,
-                                    color: Color.fromARGB(255, 0, 0, 0),
+                                    color: Color.fromARGB(255, 237, 237, 237),
                                   ),
                                 ),
                               TextSpan(
@@ -88,7 +88,7 @@ class _Mphase1State extends State<Mphase1> {
                                     letterSpacing: 0,
                                     fontWeight: FontWeight.w500,
                                     decoration: TextDecoration.none,
-                                    color: Color.fromARGB(255, 0, 0, 0),
+                                    color: Color.fromARGB(255, 255, 255, 255),
                                   ),
                                 ),
                               ])])

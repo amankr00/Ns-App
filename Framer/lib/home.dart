@@ -298,26 +298,44 @@ class _MobileLyState extends State<MobileLy> {
       }
     }
     return Scaffold(
-        backgroundColor: Color.fromARGB(255, 255, 255, 255),
-        body: SingleChildScrollView(
-          child: Column(
+        // backgroundColor: Color.fromARGB(255, 0, 0, 0),
+        body: Stack(
+          children : [
+
+          Container(
+          width: MediaQuery.of(context).size.width * 1,
+          height: MediaQuery.of(context).size.height * 1,
+          // color: Colors.purple,
+          // height: 300,
+          child : ClipRect(
+          child: Image.asset('assets/images/bg.jpg',
+          fit : BoxFit.fill
+          ),
+          )),
+
+          Column(
+          children : [
+          Navbar(),
+          Expanded(
+          child : 
+          SingleChildScrollView(
+          child : Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Navbar(),
               Container(
                   child: Stack(children: [
-                  Container(
-                        width: MediaQuery.of(context).size.width * 1,
-                        // height: MediaQuery.of(context).size.height * 1,
-                        // height: 300,
-                        color: Color.fromRGBO(255, 255, 255, 0.7),
-                        child: ClipRect(
-                            child: Opacity(
-                          opacity:
-                              0.3, // Adjust the opacity level (0.0 - fully transparent, 1.0 - fully opaque)
-                          child: Image.asset('assets/images/pex.jpg'),
-                        ))),
+                  // Container(
+                  //       width: MediaQuery.of(context).size.width * 1,
+                  //       // height: MediaQuery.of(context).size.height * 1,
+                  //       // height: 300,
+                  //       color: Color.fromRGBO(255, 255, 255, 0.7),
+                  //       child: ClipRect(
+                  //           child: Opacity(
+                  //         opacity:
+                  //             0.3, // Adjust the opacity level (0.0 - fully transparent, 1.0 - fully opaque)
+                  //         child: Image.asset('assets/images/pex.jpg'),
+                  //       ))),
                     Mphase1(pRt, pLt),
                     
                   ])),
@@ -377,7 +395,7 @@ class _MobileLyState extends State<MobileLy> {
               ),
               Mphase7(),
             ],
-          ),
-        ));
+          )),)])])
+        );
   }
 }

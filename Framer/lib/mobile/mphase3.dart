@@ -6,22 +6,23 @@ class Mphase3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      // height: MediaQuery.of(context).size.width * 1.3,
+       height: MediaQuery.of(context).size.width * 1.3,
+      width: MediaQuery.of(context).size.width * 0.85,
       decoration: BoxDecoration(
-          // color: Color.fromARGB(166, 231, 185, 78),
+          color: Color.fromARGB(166, 231, 185, 78),
           borderRadius: BorderRadius.circular(30)),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(80, 0, 0, 0),
+            padding: EdgeInsetsDirectional.fromSTEB(40, 0, 0, 0),
             child:
                 Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
               SizedBox(
-                height: 30,
+                height: 40,
               ),
               Container(
-                  width: MediaQuery.of(context).size.width * 0.7,
+                  width: MediaQuery.of(context).size.width * 0.8,
                   // color: Colors.purple,
                   child: RichText(
                       textAlign: TextAlign.start,
@@ -54,6 +55,7 @@ class Mphase3 extends StatelessWidget {
                             // Anime2(),
                             Container(
                               width: MediaQuery.of(context).size.width * 0.7,
+                              // color : Colors.greenAccent,
                               child: Text(
                                 'Develop timelines and milestones, allocate resources, assign tasks, estimate costs, and create budgets to ensure efficient project management.',
                                 style: TextStyle(

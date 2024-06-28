@@ -4,16 +4,20 @@ import 'package:framer/phases/anime2.dart';
 class Mphase5 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Padding(padding: EdgeInsets.only(top : 10),
+    child  : Container(
+    height: MediaQuery.of(context).size.width * 1.3,
+      width: MediaQuery.of(context).size.width * 0.85,
     decoration: BoxDecoration(
-    // color: Color.fromARGB(255, 141, 202, 8),
+    color: Color.fromARGB(255, 141, 202, 8),
     borderRadius: BorderRadius.circular(30)
     ),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           // SizedBox(height: 40,),
           Container(
+          // color : Colors.yellow,
             child: ClipRRect(
                 child: Image.asset(
             // width: MediaQuery.of(context).size.width * 0.9,
@@ -23,7 +27,7 @@ class Mphase5 extends StatelessWidget {
           ),
           // ),
       
-          Padding(padding: EdgeInsets.only(left : 80 , top : 30),
+          Padding(padding: EdgeInsets.only(left : 27 , top : 0),
       
           child :
           Column(
@@ -33,8 +37,8 @@ class Mphase5 extends StatelessWidget {
               Container(
                   // width : 380,
                   // height: 130,
-                  width: MediaQuery.of(context).size.width * 0.7,
-                  // color: Colors.green,
+                  width: MediaQuery.of(context).size.width * 0.77,
+                  // color: const Color.fromARGB(255, 178, 218, 180),
                   child: RichText(
                   textAlign: TextAlign.start,
                       text: TextSpan(children: [
@@ -89,6 +93,8 @@ class Mphase5 extends StatelessWidget {
                               children: [
                                 Container(
                                 width: MediaQuery.of(context).size.width * 0.7,
+                                height: MediaQuery.of(context).size.height * 0.1,
+                                // color : Colors.amber,
                                   child: Text(
                                     'Ensure adherence to legal and data security standards by following regulations, implementing robust protocols, and regularly auditing for risks.',
                                     style: TextStyle(
@@ -113,6 +119,6 @@ class Mphase5 extends StatelessWidget {
           )
         ],
       ),
-    );
+    ));
   }
 }

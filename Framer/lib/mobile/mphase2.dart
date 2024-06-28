@@ -9,10 +9,12 @@ class Mphase2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      // color: Colors.purple,
       height: MediaQuery.of(context).size.width * 1.3,
+      width: MediaQuery.of(context).size.width * 0.85,
+
       decoration: BoxDecoration(
           // color: Color.fromARGB(255, 10, 185, 185), 
+      color: Color.fromARGB(255, 208, 129, 222),
           borderRadius: BorderRadius.circular(30)),
       child: Column(
         // Purple image and Right - side text
@@ -31,7 +33,7 @@ class Mphase2 extends StatelessWidget {
                   child: Image.asset(
                 'assets/images/sideloook.png',
                 width: MediaQuery.of(context).size.width * 1,
-                fit: BoxFit.fitHeight,
+                fit: BoxFit.fill,
               ))),
 
           // ),
@@ -102,13 +104,13 @@ class Mphase2 extends StatelessWidget {
                   )),
 
               Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0, 40, 0, 0),
                   child: Container(
                     // width: 550,
                     width: MediaQuery.of(context).size.width * 0.7,
                     //  height: MediaQuery.of(context).size.height * 0.7,
                     // height: 300,
-                    child: Column(
+                    child:Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Row(
