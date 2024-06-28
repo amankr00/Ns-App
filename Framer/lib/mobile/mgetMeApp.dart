@@ -43,7 +43,7 @@ class _HoverEffectExample1State extends State<HoverEffectExample1> {
                 // Navigator.pop(context, true),
                 builder: (BuildContext context) {
                   return Container(
-                      child: subscriptionForm(
+                      child: subscriptionForm1(
                           context, _nameController, _numberController));
                 },
               );
@@ -104,7 +104,7 @@ class _HoverEffectExample1State extends State<HoverEffectExample1> {
     ]);
   }
 
-  Center subscriptionForm(
+  Center subscriptionForm1(
       BuildContext context,
       TextEditingController nameController,
       TextEditingController numberController) {
