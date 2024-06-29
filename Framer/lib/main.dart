@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => HomeMain(title: 'Ns',),
-        // '/' : (context) => TypeWritterText(),
+        // '/' : (context) => TapToScroll(),
       },
     );
   }

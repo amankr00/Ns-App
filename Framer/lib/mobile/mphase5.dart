@@ -10,7 +10,7 @@ class Mphase5 extends StatelessWidget {
       width: MediaQuery.of(context).size.width * 0.85,
     decoration: BoxDecoration(
      border: Border.all(
-          color: Color(0xff06B6FB), // Border color
+          color: Color(0xffFFAE42), // Border color
           width: 3,           // Border width
         ),
     color: Color.fromARGB(91, 226, 124, 168),
@@ -49,7 +49,7 @@ class Mphase5 extends StatelessWidget {
                     TextSpan(
                       text: 'Ensuring ',
                       style: TextStyle(
-                        color: Color.fromARGB(255, 3, 3, 4),
+                        color: Color.fromARGB(255, 255, 255, 255),
                         fontSize: 50,
                         fontWeight: FontWeight.bold,
                       ),
@@ -57,7 +57,7 @@ class Mphase5 extends StatelessWidget {
                     TextSpan(
                       text: 'legal ',
                       style: TextStyle(
-                        color: Color(0xff008cf7),
+                        color: Color(0xffFFAE42),
                         fontSize: 50,
                         fontWeight: FontWeight.bold,
                       ),
@@ -65,7 +65,7 @@ class Mphase5 extends StatelessWidget {
                     TextSpan(
                       text: 'and ',
                       style: TextStyle(
-                        color: Color.fromARGB(255, 0, 0, 0),
+                        color: Color.fromARGB(255, 255, 255, 255),
                         fontSize: 50,
                         fontWeight: FontWeight.bold,
                       ),
@@ -73,7 +73,7 @@ class Mphase5 extends StatelessWidget {
                     TextSpan(
                       text: 'data security ',
                       style: TextStyle(
-                        color:  Color(0xff008cf7),
+                        color:  Color(0xffFFAE42),
                         fontSize: 50,
                         fontWeight: FontWeight.bold,
                       ),
@@ -81,7 +81,7 @@ class Mphase5 extends StatelessWidget {
                     TextSpan(
                       text: 'compliance',
                       style: TextStyle(
-                        color: Color.fromARGB(255, 0, 0, 0),
+                        color: Color.fromARGB(255, 255, 255, 255),
                         fontSize: 50,
                         fontWeight: FontWeight.bold,
                       ),
@@ -105,7 +105,8 @@ class Mphase5 extends StatelessWidget {
                                       // decoration: TextDecoration.lineThrough,
                                       decoration: TextDecoration.none,
                                       // color: Colors.black,
-                                      color  :Color(0xffFFFDD0),
+                                      color  :Color.fromARGB(255, 255, 255, 255),
+                                      // color : Color(0xffEEF7FF),
                                       fontFamily: 'Inter',
                                       fontWeight: FontWeight.normal,
                                       // decoration: TextDecoration.none,/

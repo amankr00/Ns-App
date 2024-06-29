@@ -301,15 +301,17 @@ class _MobileLyState extends State<MobileLy> {
     }
     return Scaffold(
         // backgroundColor: Color.fromARGB(255, 0, 0, 0),
-        body: Stack(
-        children: [
+        body: Stack(children: [
       Container(
           width: MediaQuery.of(context).size.width * 1,
           height: MediaQuery.of(context).size.height * 1,
           // color: Colors.purple,
           // height: 300,
           child: ClipRect(
-            child: Image.asset('assets/images/bg.jpg', fit: BoxFit.fill),
+            child: Opacity(
+              opacity: 0.9, // Set the opacity value (0.0 to 1.0)
+              child: Image.asset('assets/images/bg.jpg', fit: BoxFit.fill),
+            ),
           )),
       Column(children: [
         Navbar(),
@@ -391,7 +393,6 @@ class _MobileLyState extends State<MobileLy> {
                 height: 30,
               ),
               Mphase7(),
-              
             ],
           )),
         )

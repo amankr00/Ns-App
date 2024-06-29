@@ -39,17 +39,17 @@ class _Mphase2State extends State<Mphase2> {
       width: MediaQuery.of(context).size.width * 0.85,
       duration: Duration(seconds: 3),
       curve: Curves.easeInOut,
-      transform: Matrix4.translationValues(
-        _visible
-            ? MediaQuery.of(context).size.width * -0.5
-            : 0, // x-axis translation
-        0, // y-axis translation, adjust if needed
-        0, // z-axis translation, adjust if needed
-      ),
+      // transform: Matrix4.translationValues(
+      //   _visible
+      //       ? MediaQuery.of(context).size.width * -0.5
+      //       : 0, // x-axis translation
+      //   0, // y-axis translation, adjust if needed
+      //   0, // z-axis translation, adjust if needed
+      // ),
       decoration: BoxDecoration(
           // color: Color.fromARGB(255, 10, 185, 185),
           border: Border.all(
-            color: Color(0xff721FF9), // Border color
+            color: Color(0xffAFE313), // Border color
             width: 3, // Border width
           ),
           color: Color.fromARGB(58, 208, 129, 222),
@@ -113,7 +113,7 @@ class _Mphase2State extends State<Mphase2> {
                                 letterSpacing: 0,
                                 fontWeight: FontWeight.bold,
                                 decoration: TextDecoration.none,
-                                color: Color.fromARGB(255, 0, 0, 0),
+                                color: Color.fromARGB(255, 255, 255, 255),
                               )),
                           TextSpan(
                               text: 'client needs',
@@ -122,7 +122,7 @@ class _Mphase2State extends State<Mphase2> {
                                 letterSpacing: 0,
                                 fontWeight: FontWeight.bold,
                                 decoration: TextDecoration.none,
-                                color: Color(0xff721FF9),
+                                color: Color(0xffAFE313),
                               )),
                           TextSpan(
                               text: ' for projects.',
@@ -131,14 +131,15 @@ class _Mphase2State extends State<Mphase2> {
                                 letterSpacing: 0,
                                 fontWeight: FontWeight.bold,
                                 decoration: TextDecoration.none,
-                                color: Color.fromARGB(255, 0, 0, 0),
+                                color: Color.fromARGB(255, 254, 254, 254),
                               ))
                         ],
                       ),
                     )
-                        .animate()
-                        .fade(duration: 2000.ms)
-                        .slideX(begin: 5, end: 0),
+                        // .animate()
+                        // .fade(duration: 2000.ms)
+                        // .slideX(begin: 5, end: 0)
+                        ,
                   )),
 
               Padding(
@@ -170,7 +171,7 @@ class _Mphase2State extends State<Mphase2> {
                                           fontWeight: FontWeight.w500,
                                           decoration: TextDecoration.none,
                                           // color: Color.fromARGB(255, 0, 0, 0),
-                                          color : Color(0xffFFD700)
+                                          color : Color.fromARGB(255, 255, 255, 255)
                                         )))
                               ]),
                         ]),

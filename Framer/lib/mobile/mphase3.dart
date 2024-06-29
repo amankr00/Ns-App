@@ -34,7 +34,7 @@ class Mphase3 extends StatelessWidget {
                         TextSpan(
                           text: 'Allocating resources and ',
                           style: TextStyle(
-                            color: const Color.fromARGB(255, 3, 3, 3),
+                            color: Color.fromARGB(255, 255, 255, 255),
                             fontSize: 50,
                             fontWeight: FontWeight.bold,
                           ),
@@ -66,7 +66,7 @@ class Mphase3 extends StatelessWidget {
                                   // decoration: TextDecoration.lineThrough,
                                   decoration: TextDecoration.none,
                                   // color: Colors.black,
-                                  color : Color(0xffFFD700),
+                                  color : Color.fromARGB(255, 255, 255, 255),
                                   fontFamily: 'Inter',
                                   fontWeight: FontWeight.normal,
                                   // decoration: TextDecoration.none,/
@@ -85,10 +85,10 @@ class Mphase3 extends StatelessWidget {
               // height: MediaQuery.of(context).size.height * 0.4,
               child: ClipRect(
                   child: Image.asset(
-                      // width: MediaQuery.of(context).size.width * 0.8,
+                      // width: MediaQuery.of(context).size.width,
                       // height: MediaQuery.of(context).size.height * 0.6,
                       'assets/images/lowlogo2.png',
-                      fit: BoxFit.fitWidth))),
+                      fit: BoxFit.cover))),
         ],
       ),
     );

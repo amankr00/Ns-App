@@ -100,9 +100,10 @@ class _Mphase1State extends State<Mphase1> {
                   Padding(
                     padding: EdgeInsets.only(top: 25),
                     child: HoverEffectExample1()
-                        .animate()
-                        .fade(delay: 100.ms)
-                        .slideX(begin: -5, end: 0),
+                        // .animate()
+                        // .fade(delay: 100.ms)
+                        // .slideX(begin: -5, end: 0)
+                        ,
                   )
 
                 ]),

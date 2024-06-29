@@ -10,7 +10,7 @@ class Mphase6 extends StatelessWidget {
     decoration: BoxDecoration(
     border : Border.all(
     width: 3,
-    color : Color(0xffE7408F)),
+    color : Color(0xffFC74FD)),
     color: Color.fromARGB(62, 222, 175, 133),
     borderRadius: BorderRadius.circular(30)
     ),
@@ -30,14 +30,14 @@ class Mphase6 extends StatelessWidget {
                       text: 'Staying ahead with ',
                       style: TextStyle(
                         fontSize: 50,
-                        color: Color.fromARGB(255, 0, 0, 0),
+                        color: Color.fromARGB(255, 255, 255, 255),
                         fontWeight: FontWeight.bold,
                       )),
                   TextSpan(
                       text: 'innovative technology ',
                       style: TextStyle(
                         fontSize: 50,
-                        color:Color(0xfffe4d87),
+                        color:Color(0xffFC74FD),
                         fontWeight: FontWeight.bold,
                       )),
                 ]))),
@@ -58,7 +58,7 @@ class Mphase6 extends StatelessWidget {
                                       style: TextStyle(
                                         decoration: TextDecoration.none,
                                         // color: Colors.black , 
-                                        color : Color(0xffFFD700),
+                                        color : Color.fromARGB(255, 255, 255, 255),
                                         fontFamily: 'Inter',
                                         fontSize: 20,
                                       ),
