@@ -81,7 +81,7 @@ class _Mphase1State extends State<Mphase1> {
                           text : TextSpan(children: [
                             TextSpan(children: [
                               TextSpan(
-                              text : "Turning your vision into innovative apps, we create custom solutions that drive success and foster growth in the digital realm.",
+                              text : "Turning your vision into innovative apps, we create custom solutions that drive success and faster growth in the digital realm.",
                               style: TextStyle(
                                     fontSize: 20,
                                     fontFamily: 'bebas-neue',

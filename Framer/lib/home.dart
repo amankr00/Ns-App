@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:flutter/rendering.dart';
 import 'package:framer/mobile/appAnime.dart';
 import 'package:framer/mobile/lineAnime.dart';
 import 'package:framer/mobile/mphase1.dart';
@@ -10,10 +11,14 @@ import 'package:framer/mobile/mphase7.dart';
 import 'package:framer/mobile/mphaseViewer.dart';
 import 'package:framer/mobile/navbar.dart';
 import 'package:framer/mobile/test.dart';
+import 'package:framer/phases/anime.dart';
+import 'package:framer/phases/anime2.dart';
 import 'package:framer/phases/anime3.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:framer/navbar/navbar.dart';
+import 'package:framer/phases/anime5.dart';
+import 'package:framer/phases/arrowRt.dart';
 import 'package:framer/phases/customWidget.dart';
 import 'package:framer/phases/phase2.dart';
 import 'package:framer/phases/phase3.dart';
@@ -282,6 +287,7 @@ class MobileLy extends StatefulWidget {
 class _MobileLyState extends State<MobileLy> {
   @override
   Widget build(BuildContext context) {
+    bool isDownloadHovered = false;
     String ty = "MOB";
     double pRt = MediaQuery.of(context).size.width;
     double pLt = MediaQuery.of(context).size.width;
@@ -300,103 +306,692 @@ class _MobileLyState extends State<MobileLy> {
       }
     }
     return Scaffold(
-        // backgroundColor: Color.fromARGB(255, 0, 0, 0),
-        body: Stack(children: [
-      Container(
-          width: MediaQuery.of(context).size.width * 1,
-          height: MediaQuery.of(context).size.height * 1,
-          // color: Colors.purple,
-          // height: 300,
-          child: ClipRect(
-            child: Opacity(
-              opacity: 0.9, // Set the opacity value (0.0 to 1.0)
-              child: Image.asset('assets/images/bg.jpg', fit: BoxFit.fill),
-            ),
-          )),
-      Column(children: [
-        Navbar(),
-        Expanded(
+        // backgroundColor: Color(0xff5A258A),
+        body: Column(children: [
+      Navbar(),
+      Expanded(
           child: SingleChildScrollView(
-              child: Column(
+        child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              // SizedBox(
+              //   height: 50,
+              // ),
+
+              Stack(
+                children: [
+                  Positioned(
+                    child: Container(
+                      // color : Color.fromARGB(255, 136, 118, 153),
+                      // color : Color(0xff5A258A),
+                      color: Color(0xff021024),
+
+                      width: MediaQuery.of(context).size.width,
+                      height: MediaQuery.of(context).size.height * 0.91,
+                      child: Column(children: [
+                        SizedBox(
+                          height: 40,
+                        ),
+                        Container(
+                          width: MediaQuery.of(context).size.width * 0.68,
+                          // color : Colors.blueAccent,
+                          alignment: Alignment.center,
+
+                          child: Text(
+                            'Transforming Your Ideas into innovative apps',
+                            style: TextStyle(
+                              fontFamily: 'roboto',
+                              fontSize: 16,
+                              // color: Color(0xffFF576D),
+                              color: Color(0xff7da0ca),
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 30,
+                        ),
+                        Container(
+                            width: MediaQuery.of(context).size.width * 0.8,
+                            // color : const Color.fromARGB(255, 68, 255, 130),
+                            child: Text(
+                              'Your trusted ally in navigation of evolving digital landscape.',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                  fontSize: 40,
+                                  fontFamily: 'roboto',
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white),
+                            )),
+                        SizedBox(
+                          height: 30,
+                        ),
+                        Container(
+                            width: MediaQuery.of(context).size.width * 0.7,
+                            // color : const Color.fromARGB(255, 215, 68, 255),
+                            child: Text(
+                              'Turning your vision into innovative apps, we create custom solutions that drive success and faster growth in the digital realm.',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                  fontSize: 16,
+                                  fontFamily: 'roboto',
+                                  fontWeight: FontWeight.normal,
+                                  color: Colors.white),
+                            )),
+                        SizedBox(
+                          height: 30,
+                        ),
+                        AnimatedContainer(
+                            width: MediaQuery.of(context).size.width * 0.40,
+                            height: MediaQuery.of(context).size.height * 0.08,
+                            alignment: Alignment.center,
+                            decoration: BoxDecoration(
+                              // color: Color(0xffFF576D),
+                              color: Color(0xff5483b3),
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            duration: 1500.ms,
+                            child: Text(
+                              'LEARN MORE',
+                              style: TextStyle(
+                                  fontSize: 18,
+                                  fontFamily: 'roboto',
+                                  fontWeight: FontWeight.normal,
+                                  color: Colors.white),
+                            )),
+                        SizedBox(
+                          height: 40,
+                        ),
+                        Anime5(),
+                      ]),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 100,
+                  ),
+                ],
+              ),
+
               Container(
-                  child: Stack(children: [
-                // Container(
-                //       width: MediaQuery.of(context).size.width * 1,
-                //       // height: MediaQuery.of(context).size.height * 1,
-                //       // height: 300,
-                //       color: Color.fromRGBO(255, 255, 255, 0.7),
-                //       child: ClipRect(
-                //           child: Opacity(
-                //         opacity:
-                //             0.3, // Adjust the opacity level (0.0 - fully transparent, 1.0 - fully opaque)
-                //         child: Image.asset('assets/images/pex.jpg'),
-                //       ))),
-                Mphase1(pRt, pLt),
-              ])),
-              SizedBox(
-                height: 30,
+                height: 100,
+                color: Colors.blue,
               ),
-              MAnime2(),
-              SizedBox(
-                height: 30,
+
+              // phase 2
+
+              Container(
+                // color : Colors.pink,
+                child: Column(
+                  children: [
+                    SizedBox(
+                      height: 30,
+                    ),
+                    Container(
+                        // color : Colors.red,
+                        child: Text('WHO ARE WE',
+                            style: TextStyle(
+                                fontFamily: 'roboto',
+                                fontSize: 18,
+                                fontWeight: FontWeight.normal,
+                                color: Color(0xff052659)))),
+                    SizedBox(
+                      height: 30,
+                    ),
+                    Container(
+                        // color : Colors.red,
+                        width: MediaQuery.of(context).size.width * 0.70,
+                        alignment: Alignment.center,
+                        child: Text('Building digital products from scratch',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                fontFamily: 'roboto',
+                                fontSize: 32,
+                                fontWeight: FontWeight.bold,
+                                color: Color(0xff052659)))),
+                    SizedBox(
+                      height: 30,
+                    ),
+                    Container(
+                        width: MediaQuery.of(context).size.width * 0.8,
+                        alignment: Alignment.center,
+                        child: Text(
+                            "We're a team of product managers, engineers and designers passionate about helping companies create products that bring joy, scale and succeed. It's simple- our goal is to create revolutionary products, together.",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                fontFamily: 'roboto',
+                                fontSize: 16,
+                                fontWeight: FontWeight.normal,
+                                color: Color(0xff052659)))),
+                    SizedBox(
+                      height: 30,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                          child: Text('KNOW MORE',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                  fontFamily: 'roboto',
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.normal,
+                                  color: Color(0xff021024))),
+                        )
+                      ],
+                    ),
+                    SizedBox(
+                      height: 30,
+                    ),
+                  ],
+                ),
               ),
-              Mphase2(),
-              // ScrollAnimatedWidget(),
+
+              // PHASE - 3
+
+              Container(
+                  width: MediaQuery.of(context).size.width * 0.9,
+                  decoration: BoxDecoration(
+                      color: Color.fromARGB(255, 240, 228, 255),
+                      borderRadius: BorderRadius.circular(25)),
+                  child: Column(
+                    children: [
+                      SizedBox(
+                        height: 30,
+                      ),
+                      // image
+
+                      Container(
+                        width: MediaQuery.of(context).size.width * 0.3,
+                        // height: 60,
+                        child: ClipRect(
+                            child: Image.asset(
+                          'assets/images/client.png',
+                        )),
+                      ),
+
+                      SizedBox(
+                        height: 30,
+                      ),
+
+                      Container(
+                          child: Text('Project scoping',
+                              style: TextStyle(
+                                  fontFamily: 'roboto',
+                                  fontSize: 24,
+                                  fontWeight: FontWeight.bold,
+                                  color: Color(0xff052659)))),
+
+                      SizedBox(
+                        height: 30,
+                      ),
+
+                      Container(
+                        width: MediaQuery.of(context).size.width * 0.7,
+                        child: Text(
+                            'Conduct stakeholder interviews and surveys to identify client goals, pain points, and requirements for a clear project scope statement.',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                fontFamily: 'roboto',
+                                fontSize: 18,
+                                fontWeight: FontWeight.normal,
+                                color: Color(0xff052659))),
+                      ),
+                      SizedBox(
+                        height: 40,
+                      ),
+                    ],
+                  )),
 
               SizedBox(
-                height: 30,
+                height: 20,
               ),
-              MAnime2(),
+              Container(
+                  width: MediaQuery.of(context).size.width * 0.9,
+                  decoration: BoxDecoration(
+                      color: Color(0xffFFDADA),
+                      borderRadius: BorderRadius.circular(25)),
+                  child: Column(
+                    children: [
+                      SizedBox(
+                        height: 30,
+                      ),
+                      // image
+
+                      Container(
+                        width: MediaQuery.of(context).size.width * 0.3,
+                        // height: 60,
+                        child: ClipRect(
+                            child: Image.asset(
+                          'assets/images/manage.png',
+                        )),
+                      ),
+
+                      SizedBox(
+                        height: 30,
+                      ),
+
+                      Container(
+                          child: Text('Task management',
+                              style: TextStyle(
+                                  fontFamily: 'roboto',
+                                  fontSize: 24,
+                                  fontWeight: FontWeight.bold,
+                                  color: Color(0xff052659)))),
+
+                      SizedBox(
+                        height: 30,
+                      ),
+
+                      Container(
+                        width: MediaQuery.of(context).size.width * 0.7,
+                        child: Text(
+                            'Allocating resources and budgeting tasks involves effectively distributing available assets and financial planning to achieve project goals efficiently.',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                fontFamily: 'roboto',
+                                fontSize: 18,
+                                fontWeight: FontWeight.normal,
+                                color: Color(0xff052659))),
+                      ),
+                      SizedBox(
+                        height: 40,
+                      ),
+                    ],
+                  )),
               SizedBox(
-                height: 30,
+                height: 20,
               ),
-              Mphase3(),
-              SizedBox(
-                height: 30,
-              ),
-              MAnime2(),
-              SizedBox(
-                height: 30,
-              ),
-              // MPhase4Viewer(),
-              Padding(
-                  padding: EdgeInsets.only(top: 30, bottom: 30),
-                  child: Container(
-                    height: MediaQuery.of(context).size.width * 0.8,
-                    color: Color.fromRGBO(243, 239, 239, 0.561),
-                    // child: MPhase4Viewer()
+              Container(
+                  width: MediaQuery.of(context).size.width * 0.9,
+                  decoration: BoxDecoration(
+                      color: Color.fromARGB(255, 243, 234, 251),
+                      borderRadius: BorderRadius.circular(25)),
+                  child: Column(
+                    children: [
+                      SizedBox(
+                        height: 30,
+                      ),
+                      // image
+
+                      Container(
+                        width: MediaQuery.of(context).size.width * 0.3,
+                        // height: 60,
+                        child: ClipRect(
+                            child: Image.asset(
+                          'assets/images/inno.png',
+                        )),
+                      ),
+
+                      SizedBox(
+                        height: 30,
+                      ),
+
+                      Container(
+                          child: Text('Innovative technology',
+                              style: TextStyle(
+                                  fontFamily: 'roboto',
+                                  fontSize: 24,
+                                  fontWeight: FontWeight.bold,
+                                  color: Color(0xff052659)))),
+
+                      SizedBox(
+                        height: 30,
+                      ),
+
+                      Container(
+                        width: MediaQuery.of(context).size.width * 0.7,
+                        child: Text(
+                            'Conduct stakeholder interviews and surveys to identify client goals, pain points, and requirements for a clear project scope statement.',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                fontFamily: 'roboto',
+                                fontSize: 18,
+                                fontWeight: FontWeight.normal,
+                                color: Color(0xff052659))),
+                      ),
+                      SizedBox(
+                        height: 40,
+                      ),
+                    ],
                   )),
               SizedBox(
                 height: 30,
               ),
-              MAnime2(),
-              SizedBox(
-                height: 17,
-              ),
-              Mphase5(),
-              SizedBox(
-                height: 30,
-              ),
-              MAnime2(),
-              SizedBox(
-                height: 30,
-              ),
-              Mphase6(),
-              SizedBox(
-                height: 30,
-              ),
-              MAnime2(),
-              SizedBox(
-                height: 30,
-              ),
-              Mphase7(),
-            ],
-          )),
-        )
-      ])
+
+              Container(
+                  width: MediaQuery.of(context).size.width,
+                  height: MediaQuery.of(context).size.height * 0.91,
+                  alignment: Alignment.center,
+                  // color: Color.fromARGB(255, 235, 203, 203),
+                  child: Stack(children: [
+                    Column(
+                      children: [
+                        SizedBox(
+                          height: 25,
+                        ),
+                        Container(
+                            width: MediaQuery.of(context).size.width * 0.7,
+                            // color : Colors.purple,
+                            alignment: Alignment.center,
+                            child: Text(
+                                'Converting your idea into a pillar of the startup community',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    fontFamily: 'roboto',
+                                    fontSize: 28,
+                                    fontWeight: FontWeight.bold,
+                                    color: Color(0xff052659)))),
+                        SizedBox(
+                          height: 25,
+                        ),
+                        Container(
+                            width: MediaQuery.of(context).size.width * 0.8,
+                            // color : Colors.purple,
+                            alignment: Alignment.center,
+                            child: Text(
+                                'At Simublade Labs, we build your digital product idea from the ground up and make it an investors’ favorite. A journey that starts and is embedded with emerging technologies.',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    fontFamily: 'roboto',
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.normal,
+                                    color: Color(0xff052659)))),
+                      ],
+                    ),
+                    Positioned(
+                        top: 300,
+                        child: Container(
+                            width: MediaQuery.of(context).size.width * 0.33,
+                            color: Colors.purple,
+                            alignment: Alignment.center,
+                            child: Chip(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(0),
+                                  side: const BorderSide(color: Colors.black),
+                                ),
+                                avatar: CircleAvatar(
+                                    child: Container(
+                                  child: ClipRect(
+                                      child: Image.asset(
+                                    'assets/images/manage.png',
+                                    width: 70,
+                                    height: 70,
+                                  )),
+                                )),
+                                backgroundColor: Color(0xffFEF7FF),
+                                label: Text(
+                                  'Android Studio',
+                                  style: TextStyle(
+                                      color: Color(0xff021024),
+                                      fontFamily: 'roboto',
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.normal),
+                                )))),
+                    Positioned(
+                        top: 300,
+                        left: 80,
+                        child: Container(
+                            width: MediaQuery.of(context).size.width * 0.8,
+                            // color : Colors.purple,
+                            alignment: Alignment.center,
+                            child: Chip(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(0),
+                                  side: const BorderSide(color: Colors.black),
+                                ),
+                                avatar: CircleAvatar(
+                                    child: Container(
+                                  child: ClipRect(
+                                      child: Image.asset(
+                                    'assets/images/manage.png',
+                                    width: 70,
+                                    height: 70,
+                                  )),
+                                )),
+                                backgroundColor: Color(0xffFEF7FF),
+                                label: Text(
+                                  'Android Studio',
+                                  style: TextStyle(
+                                      color: Color(0xff021024),
+                                      fontFamily: 'roboto',
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.normal),
+                                )))),
+                    Positioned(
+                        top: 360,
+                        left: 80,
+                        child: Container(
+                            width: MediaQuery.of(context).size.width * 0.8,
+                            // color : Colors.purple,
+                            alignment: Alignment.center,
+                            child: Chip(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(0),
+                                  side: const BorderSide(color: Colors.black),
+                                ),
+                                avatar: CircleAvatar(
+                                    child: Container(
+                                  child: ClipRect(
+                                      child: Image.asset(
+                                    'assets/images/manage.png',
+                                    width: 70,
+                                    height: 70,
+                                  )),
+                                )),
+                                backgroundColor: Color(0xffFEF7FF),
+                                label: Text(
+                                  'AR/VR',
+                                  style: TextStyle(
+                                      color: Color(0xff021024),
+                                      fontFamily: 'roboto',
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.normal),
+                                )))),
+                    Positioned(
+                        top: 360,
+                        left: -90,
+                        child: Container(
+                            width: MediaQuery.of(context).size.width * 0.8,
+                            // color : Colors.purple,
+                            alignment: Alignment.center,
+                            child: Chip(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(0),
+                                  side: const BorderSide(color: Colors.black),
+                                ),
+                                avatar: CircleAvatar(
+                                    child: Container(
+                                  child: ClipRect(
+                                      child: Image.asset(
+                                    'assets/images/manage.png',
+                                    width: 70,
+                                    height: 70,
+                                  )),
+                                )),
+                                backgroundColor: Color(0xffFEF7FF),
+                                label: Text(
+                                  'Artificial Intelligence',
+                                  style: TextStyle(
+                                      color: Color(0xff021024),
+                                      fontFamily: 'roboto',
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.normal),
+                                )))),
+                    Positioned(
+                        top: 420,
+                        left: -100,
+                        child: Container(
+                            width: MediaQuery.of(context).size.width * 0.8,
+                            // color : Colors.purple,
+                            alignment: Alignment.center,
+                            child: Chip(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(0),
+                                  side: const BorderSide(color: Colors.black),
+                                ),
+                                avatar: CircleAvatar(
+                                    child: Container(
+                                  child: ClipRect(
+                                      child: Image.asset(
+                                    'assets/images/manage.png',
+                                    width: 70,
+                                    height: 70,
+                                  )),
+                                )),
+                                backgroundColor: Color(0xffFEF7FF),
+                                label: Text(
+                                  'Internet of Things',
+                                  style: TextStyle(
+                                      color: Color(0xff021024),
+                                      fontFamily: 'roboto',
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.normal),
+                                )))),
+                    Positioned(
+                        top: 420,
+                        left: 100,
+                        child: Container(
+                            width: MediaQuery.of(context).size.width * 0.8,
+                            // color : Colors.purple,
+                            alignment: Alignment.center,
+                            child: Chip(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(0),
+                                  side: const BorderSide(color: Colors.black),
+                                ),
+                                avatar: CircleAvatar(
+                                    child: Container(
+                                  child: ClipRect(
+                                      child: Image.asset(
+                                    'assets/images/manage.png',
+                                    width: 70,
+                                    height: 70,
+                                  )),
+                                )),
+                                backgroundColor: Color(0xffFEF7FF),
+                                label: Text(
+                                  'Machine Learning',
+                                  style: TextStyle(
+                                      color: Color(0xff021024),
+                                      fontFamily: 'roboto',
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.normal),
+                                )))),
+                    Positioned(
+                        top: 480,
+                        left: -20,
+                        child: Container(
+                            width: MediaQuery.of(context).size.width * 0.8,
+                            // color : Colors.purple,
+                            alignment: Alignment.center,
+                            child: Chip(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(0),
+                                  side: const BorderSide(color: Colors.black),
+                                ),
+                                avatar: CircleAvatar(
+                                    child: Container(
+                                  child: ClipRect(
+                                      child: Image.asset(
+                                    'assets/images/manage.png',
+                                    width: 70,
+                                    height: 70,
+                                  )),
+                                )),
+                                backgroundColor: Color(0xffFEF7FF),
+                                label: Text(
+                                  'Machine Learning',
+                                  style: TextStyle(
+                                      color: Color(0xff021024),
+                                      fontFamily: 'roboto',
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.normal),
+                                )))),
+                  ])),
+
+              // Expanded(
+              //   child: SingleChildScrollView(
+              //       child: Column(
+              //     crossAxisAlignment: CrossAxisAlignment.center,
+              //     mainAxisAlignment: MainAxisAlignment.center,
+              //     children: [
+              //       Container(
+              //           child: Stack(children: [
+              //         // Container(
+              //         //       width: MediaQuery.of(context).size.width * 1,
+              //         //       // height: MediaQuery.of(context).size.height * 1,
+              //         //       // height: 300,
+              //         //       color: Color.fromRGBO(255, 255, 255, 0.7),
+              //         //       child: ClipRect(
+              //         //           child: Opacity(
+              //         //         opacity:
+              //         //             0.3, // Adjust the opacity level (0.0 - fully transparent, 1.0 - fully opaque)
+              //         //         child: Image.asset('assets/images/pex.jpg'),
+              //         //       ))),
+              //         // Mphase1(pRt, pLt),
+              //       ])),
+              //       // SizedBox(
+              //       //   height: 30,
+              //       // ),
+              //       // MAnime2(),
+              //       // SizedBox(
+              //       //   height: 30,
+              //       // ),
+              //       // Mphase2(),
+              //       // // ScrollAnimatedWidget(),
+
+              //       // SizedBox(
+              //       //   height: 30,
+              //       // ),
+              //       // MAnime2(),
+              //       // SizedBox(
+              //       //   height: 30,
+              //       // ),
+              //       // Mphase3(),
+              //       // SizedBox(
+              //       //   height: 30,
+              //       // ),
+              //       // MAnime2(),
+              //       // SizedBox(
+              //       //   height: 30,
+              //       // ),
+              //       // // MPhase4Viewer(),
+              //       // Padding(
+              //       //     padding: EdgeInsets.only(top: 30, bottom: 30),
+              //       //     child: Container(
+              //       //       height: MediaQuery.of(context).size.width * 0.8,
+              //       //       color: Color.fromRGBO(243, 239, 239, 0.561),
+              //       //       // child: MPhase4Viewer()
+              //       //     )),
+              //       // SizedBox(
+              //       //   height: 30,
+              //       // ),
+              //       // MAnime2(),
+              //       // SizedBox(
+              //       //   height: 17,
+              //       // ),
+              //       // Mphase5(),
+              //       // SizedBox(
+              //       //   height: 30,
+              //       // ),
+              //       // MAnime2(),
+              //       // SizedBox(
+              //       //   height: 30,
+              //       // ),
+              //       // Mphase6(),
+              //       // SizedBox(
+              //       //   height: 30,
+              //       // ),
+              //       // MAnime2(),
+              //       // SizedBox(
+              //       //   height: 30,
+              //       // ),
+              //       // Mphase7(),
+              //     ],
+              //   )),
+              // )
+            ]),
+      ))
     ]));
   }
 }
