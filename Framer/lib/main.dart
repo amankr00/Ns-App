@@ -27,6 +27,7 @@ class MyApp extends StatelessWidget {
         '/': (context) => HomeMain(title: 'Ns',),
         // '/' : (context) => TapToScroll(),
         // '/' : (context) => InfiniteScrollDemo(),
+        // '/' : (context) =>HomeScreen(),
       },
     );
   }

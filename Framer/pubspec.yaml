@@ -72,6 +72,8 @@ dependencies:
   visibility_detector: ^0.4.0+2
   scrollable_positioned_list: 0.3.8
   smooth_page_indicator: ^1.1.0
+  carousel_slider: ^4.2.1
+  infinite_carousel: ^1.1.1
 
   
   # The following adds the Cupertino Icons font to your application.

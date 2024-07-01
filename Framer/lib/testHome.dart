@@ -1,6 +1,9 @@
 // import "dart:math";
 
-// import "package:flutter/material.dart";
+import "package:carousel_slider/carousel_controller.dart";
+import "package:carousel_slider/carousel_slider.dart";
+import "package:flutter/material.dart";
+import "package:flutter/rendering.dart";
 // import "package:flutter_animate_on_scroll/flutter_animate_on_scroll.dart";
 // import "package:responsive_builder/responsive_builder.dart";
 
@@ -134,81 +137,113 @@
 // }
 
 
-import 'package:flutter/material.dart';
+// import 'package:flutter/material.dart';
 
 
-class InfiniteScrollDemo extends StatefulWidget {
-  @override
-  _InfiniteScrollDemoState createState() => _InfiniteScrollDemoState();
-}
+// class InfiniteScrollDemo extends StatefulWidget {
+//   @override
+//   _InfiniteScrollDemoState createState() => _InfiniteScrollDemoState();
+// }
 
-class _InfiniteScrollDemoState extends State<InfiniteScrollDemo> {
-  List<String> items = List.generate(20, (index) => 'Item $index'); // Initial list
-  ScrollController _scrollController = ScrollController();
-  bool _isLoading = false;
+// class _InfiniteScrollDemoState extends State<InfiniteScrollDemo> {
+//   List<String> items = List.generate(20, (index) => 'Item $index'); // Initial list
+//   ScrollController _scrollController = ScrollController();
+//   bool _isLoading = false;
 
-  @override
-  void initState() {
-    super.initState();
-    _scrollController.addListener(_scrollListener);
-  }
+//   @override
+//   void initState() {
+//     super.initState();
+//     _scrollController.addListener(_scrollListener);
+//   }
 
-  @override
-  void dispose() {
-    _scrollController.dispose();
-    super.dispose();
-  }
+//   @override
+//   void dispose() {
+//     _scrollController.dispose();
+//     super.dispose();
+//   }
 
-  void _scrollListener() {
-    if (_scrollController.position.pixels == _scrollController.position.maxScrollExtent) {
-      _loadMoreItems();
-    }
-  }
+//   void _scrollListener() {
+//     if (_scrollController.position.pixels == _scrollController.position.maxScrollExtent) {
+//       _loadMoreItems();
+//     }
+//   }
 
-  void _loadMoreItems() {
-    if (!_isLoading) {
-      setState(() {
-        _isLoading = true;
-      });
+//   void _loadMoreItems() {
+//     if (!_isLoading) {
+//       setState(() {
+//         _isLoading = true;
+//       });
 
-      // Simulate fetching data from a network API
-      Future.delayed(Duration(seconds: 2), () {
-        setState(() {
-          items.addAll(List.generate(10, (index) => 'Item ${items.length + index}'));
-          _isLoading = false;
-        });
-      });
-    }
-  }
+//       // Simulate fetching data from a network API
+//       Future.delayed(Duration(seconds: 2), () {
+//         setState(() {
+//           items.addAll(List.generate(10, (index) => 'Item ${items.length + index}'));
+//           _isLoading = false;
+//         });
+//       });
+//     }
+//   }
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Infinite Scroll ListView'),
-      ),
-      body: ListView.builder(
-        itemCount: items.length + 1, // Add one more item for progress indicator
-        controller: _scrollController,
-        itemBuilder: (BuildContext context, int index) {
-          if (index == items.length) {
-            return _buildProgressIndicator();
-          } else {
-            return ListTile(
-              title: Text(items[index]),
-            );
-          }
-        },
-      ),
-    );
-  }
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: Text('Infinite Scroll ListView'),
+//       ),
+//       body: ListView.builder(
+//         itemCount: items.length + 1, // Add one more item for progress indicator
+//         controller: _scrollController,
+//         itemBuilder: (BuildContext context, int index) {
+//           if (index == items.length) {
+//             return _buildProgressIndicator();
+//           } else {
+//             return ListTile(
+//               title: Text(items[index]),
+//             );
+//           }
+//         },
+//       ),
+//     );
+//   }
 
-  Widget _buildProgressIndicator() {
-    return Center(
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: CircularProgressIndicator(),
-      ),
-    );
-  }
-}
+//   Widget _buildProgressIndicator() {
+//     return Center(
+//       child: Padding(
+//         padding: const EdgeInsets.all(8.0),
+//         child: CircularProgressIndicator(),
+//       ),
+//     );
+//   }
+// }
+
+// class ImageSlider extends StatelessWidget{
+// const ImageSlider({super.key});
+
+// @override
+// Widget build (BuildContext context){
+// return Scaffold(
+// appBar: AppBar(
+// title :Text("ImageSlider",
+// style:TextStyle(
+// fontSize: 25,fontWeight:FontWeight.bold )),
+// centerTitle: true,
+// backgroundColor: Colors.red,
+// ),
+// body : ListView(
+// children: [
+// SizedBox(height: 80,),
+// CarouselSlider(items: [
+// Container(
+// margin  : EdgeInsets.all(8),
+// decoration: BoxDecoration(
+// color :Colors.black,
+// image : DecorationImage(image: NetworkImage('url'))),
+// ),
+// ] , options : CarouselOptions()
+// )
+
+// ],)
+// );
+// }
+// }
+
